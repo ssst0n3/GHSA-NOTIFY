@@ -20,9 +20,6 @@ jobs:
           packages: '["github.com/docker/docker"]'
       - name: Get the content
         run: cat output/container.xml
-      # Use the output from the `hello` step
-      - name: Create report file
-        run: cat repo/output/container.xml
       - name: Commit report
         run: |
           git config --global user.name 'Your Name'
