@@ -10,7 +10,6 @@ RUN upx notifier
 
 FROM alpine:latest
 COPY --from=builder /build/notifier /notifier
-COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /notifier
 RUN apk update && apk add git
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["//notifier"]
