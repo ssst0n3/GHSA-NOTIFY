@@ -12,4 +12,4 @@ FROM alpine:latest
 COPY --from=builder /build/notifier /notifier
 RUN chmod +x /notifier
 RUN apk update && apk add git
-ENTRYPOINT ["//notifier"]
+ENTRYPOINT ["/notifier"]
