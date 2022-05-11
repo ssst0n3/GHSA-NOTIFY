@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: update container feed
-        uses:  uses: docker://ghcr.io/ssst0n3/ghsa:v1
+        uses:  docker://ghcr.io/ssst0n3/ghsa:v1
         env:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "feed/container.xml"
