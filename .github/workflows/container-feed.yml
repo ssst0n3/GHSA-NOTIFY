@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - uses: actions/checkout@v2
+      - name: Get the content
+        run: cat output/container.xml
       - name: Hello world action step
         id: hello
         uses: ssst0n3/GHSA-NOTIFY@v1.1
@@ -15,10 +18,9 @@ jobs:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "output/container.xml"
           packages: '["github.com/docker/docker"]'
+      - name: Get the content
+        run: cat output/container.xml
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: cat repo/output/container.xml
-      - uses: actions/checkout@v2
       - name: Create report file
         run: cat repo/output/container.xml
       - name: Commit report
