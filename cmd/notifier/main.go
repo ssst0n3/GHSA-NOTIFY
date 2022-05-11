@@ -12,6 +12,6 @@ func main() {
 	var packages []string
 	awesome_error.CheckFatal(json.Unmarshal([]byte(os.Getenv("packages")), &packages))
 	for _, pkg := range packages {
-		ghsa.ListSecurityVulnerabilities(client.New(os.Getenv("GHTOKEN")), pkg, 10)
+		ghsa.ListSecurityVulnerabilitiesByPackage(client.New(os.Getenv("GHTOKEN")), pkg, 10)
 	}
 }

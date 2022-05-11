@@ -7,8 +7,14 @@ import (
 	"testing"
 )
 
-func TestQuery(t *testing.T) {
+func TestListSecurityVulnerabilitiesByPackage(t *testing.T) {
 	c := client.New(os.Getenv("GHTOKEN_TEST"))
-	q := ListSecurityVulnerabilities(c, "github.com/docker/docker", 10)
+	q := ListSecurityVulnerabilitiesByPackage(c, "github.com/docker/docker", 10)
+	spew.Dump(q)
+}
+
+func TestListSecurityVulnerabilitiesByRepository(t *testing.T) {
+	c := client.New(os.Getenv("GHTOKEN_TEST"))
+	q := ListSecurityVulnerabilitiesByRepository(c, "containerd", "containerd", 10)
 	spew.Dump(q)
 }

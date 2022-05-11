@@ -1,5 +1,30 @@
 package ghsa
 
+type QueryRepository struct {
+	Repository `graphql:"repository(name: $name, owner: $owner)"`
+}
+
+type Repository struct {
+	Description         string                                 `json:"description"`
+	Name                string                                 `json:"name"`
+	Owner               RepositoryOwner                        `json:"owner"`
+	SecurityPolicyUrl   string                                 `json:"securityPolicyUrl"`
+	VulnerabilityAlerts RepositoryVulnerabilityAlertConnection `json:"vulnerabilityAlerts" graphql:"vulnerabilityAlerts(first: $first)"`
+}
+
+type RepositoryOwner struct {
+	Url string `json:"url"`
+}
+
+type RepositoryVulnerabilityAlertConnection struct {
+	TotalCount int                            `json:"totalCount"`
+	Nodes      []RepositoryVulnerabilityAlert `json:"nodes"`
+}
+
+type RepositoryVulnerabilityAlert struct {
+	SecurityAdvisory SecurityAdvisory `json:"securityAdvisory"`
+}
+
 // SecurityVulnerabilities
 // https://docs.github.com/cn/graphql/reference/queries#securityvulnerabilityconnection
 type SecurityVulnerabilities struct {
