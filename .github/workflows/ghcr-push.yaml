@@ -5,6 +5,8 @@
 name: Push to GHCR
 on:
   push:
+    tags:
+      - '**'
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'  # every day at midnight
