@@ -1,9 +1,16 @@
 # GHSA-NOTIFY
 
 ## Usage
-Add this file to your rss reader: 
+Add these files to your rss reader: 
 
-https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/feed/container.xml
+* for container software security advisories: https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/feed/container.xml
+ * packages listened now:
+  * github.com/docker/docker
+  * github.com/containerd/containerd
+  * github.com/opencontainers/runc
+  * github.com/containerd/imgcrypt
+  * CRI-O
+  * if you find more packages, please pull a request 
 
 ## For Developer
 
