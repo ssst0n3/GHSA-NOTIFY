@@ -12,7 +12,7 @@ jobs:
         env:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "feed/container.xml"
-          packages: '["github.com/docker/docker"]'
+          packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/containerd/imgcrypt"]'
       - name: Commit
         run: |
           git config --global user.name ${{ github.repository_owner }}
