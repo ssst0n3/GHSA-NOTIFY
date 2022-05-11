@@ -35,12 +35,8 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}
           tags: ${{ env.IMAGE_TAGS }}
-          base-image: busybox:latest
-          entrypoint: |
-            bash
-            -c
-            echo 'hello world'
-          oci: true
+          containerfiles: |
+            ./Dockerfile
 
       # Push the image to GHCR (Image Registry)
       - name: Push To GHCR
