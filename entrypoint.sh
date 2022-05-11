@@ -1,6 +1,8 @@
 #!/bin/sh -l
+set -ex
+mkdir -p repo
+git clone -o repo ${GITHUB_REPOSITORY}
+cd repo
 
 /notifier
-ls -lah /github
-ls -lah /github/workflow
-ls -lah /github/home
+ls -lah output

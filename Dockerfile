@@ -12,5 +12,5 @@ FROM alpine:latest
 COPY --from=builder /build/notifier /notifier
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /notifier
-RUN apk add git
+RUN apk update && apk add git
 ENTRYPOINT ["/entrypoint.sh"]
