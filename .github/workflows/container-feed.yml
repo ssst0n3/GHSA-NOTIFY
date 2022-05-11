@@ -17,7 +17,7 @@ jobs:
         env:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "feed/container.xml"
-          packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/opencontainers/runc","github.com/containerd/imgcrypt"]'
+          packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/opencontainers/runc","github.com/containerd/imgcrypt","CRI-O"]'
       - name: Commit
         run: |
           git config --global user.name ${{ github.repository_owner }}
