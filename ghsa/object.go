@@ -1,5 +1,7 @@
 package ghsa
 
+import "time"
+
 type QueryRepository struct {
 	Repository `graphql:"repository(name: $name, owner: $owner)"`
 }
@@ -56,6 +58,7 @@ type SecurityAdvisory struct {
 	Description            string                      `json:"description"`
 	References             []SecurityAdvisoryReference `json:"references"`
 	Summary                string                      `json:"summary"`
+	UpdatedAt              time.Time                   `json:"updatedAt"`
 }
 
 // SecurityAdvisoryPackage

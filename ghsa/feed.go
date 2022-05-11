@@ -23,7 +23,7 @@ func UpdateFeed(securityVulnerabilities []SecurityVulnerability) (feed *feeds.Fe
 			Title:       securityVulnerability.Advisory.Summary,
 			Link:        &feeds.Link{Href: securityVulnerability.Advisory.Permalink},
 			Description: securityVulnerability.Advisory.Description,
-			Created:     now,
+			Created:     securityVulnerability.Advisory.UpdatedAt,
 		})
 	}
 	return
