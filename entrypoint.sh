@@ -7,3 +7,6 @@ cd repo
 
 /notifier
 ls -lah output
+git add .
+git commit -m "update"
+git push
