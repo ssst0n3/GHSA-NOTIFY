@@ -1,6 +1,8 @@
 name: Container Security Feed
 on:
   push:
+    tags-ignore: 
+      - "**"
   schedule:
     - cron: '*/5 * * * *'  # every 5 mins
 
