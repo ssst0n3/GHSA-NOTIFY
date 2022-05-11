@@ -1,8 +1,6 @@
 #!/bin/sh -l
 
-echo "Hello $env"
-time=$(date)
-echo "::set-output name=time::$time"
-
 /notifier
-ls -lah
+ls -lah /github
+ls -lah /github/workflow
+ls -lah /github/home

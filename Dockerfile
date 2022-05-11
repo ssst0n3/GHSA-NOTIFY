@@ -8,8 +8,9 @@ RUN GO111MODULE="on" GOPROXY=$GOPROXY CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go b
 RUN apk update && apk add upx
 RUN upx notifier
 
-FROM alpine:3.10
+FROM alpine:latest
 COPY --from=builder /build/notifier /notifier
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /notifier
+RUN apk add git
 ENTRYPOINT ["/entrypoint.sh"]
