@@ -1,5 +1,10 @@
 # GHSA-NOTIFY
 
+## Usage
+Add this file to your rss reader: 
+
+https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/feed/container.xml
+
 ## For Developer
 
 ### Project Structure Introduction
