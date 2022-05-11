@@ -11,12 +11,12 @@ jobs:
         uses: ssst0n3/GHSA-NOTIFY@v1.1
         env:
           GHTOKEN: ${{ secrets.github_token }}
-          feed: "output/container.xml"
+          feed: "feed/container.xml"
           packages: '["github.com/docker/docker"]'
       - name: Commit
         run: |
           git config --global user.name ${{ github.repository_owner }}
           git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
-          git add output/container.xml
+          git add feed/container.xml
           git commit -m "Automated update container feed"
           git push origin main
