@@ -1,30 +1,22 @@
-name: container security feed
+name: Container Security Feed
 on: [push]
 
 jobs:
-  hello_world_job:
+  container_feed_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to update container security feed
     steps:
       - uses: actions/checkout@v2
-      - name: Get the content
-        run: cat output/container.xml
-      - name: Hello world action step
-        id: hello
+      - name: update container feed
         uses: ssst0n3/GHSA-NOTIFY@v1.1
-        with:
-          who-to-greet: 'GHSA'
         env:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "output/container.xml"
           packages: '["github.com/docker/docker"]'
-      - name: Get the content
-        run: cat output/container.xml
       - name: Commit
         run: |
           git config --global user.name ${{ github.repository_owner }}
           git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
-          git branch main
           git add output/container.xml
           git commit -m "Automated update container feed"
           git push origin main
