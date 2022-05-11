@@ -9,7 +9,7 @@ RUN apk update && apk add upx
 RUN upx notifier
 
 FROM alpine:3.10
-COPY --from=builder notifier /notifier
+COPY --from=builder /build/notifier /notifier
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /notifier
 ENTRYPOINT ["/entrypoint.sh"]
