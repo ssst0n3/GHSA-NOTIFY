@@ -1,2 +1,3 @@
 .idea
 ghsa/init_test.go
+cmd/notifier/init_test.go

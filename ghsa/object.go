@@ -48,11 +48,14 @@ type SecurityVulnerability struct {
 // SecurityAdvisory
 // https://docs.github.com/en/graphql/reference/objects#securityadvisory
 type SecurityAdvisory struct {
-	CVSS        CVSS                        `json:"cvss"`
-	GHSAId      string                      `json:"ghsaid"`
-	Permalink   string                      `json:"permalink"`
-	Description string                      `json:"description"`
-	References  []SecurityAdvisoryReference `json:"references"`
+	CVSS                   CVSS                        `json:"cvss"`
+	GHSAId                 string                      `json:"ghsaid"`
+	NotificationsPermalink string                      `json:"notificationsPermalink"`
+	Origin                 string                      `json:"origin"`
+	Permalink              string                      `json:"permalink"`
+	Description            string                      `json:"description"`
+	References             []SecurityAdvisoryReference `json:"references"`
+	Summary                string                      `json:"summary"`
 }
 
 // SecurityAdvisoryPackage

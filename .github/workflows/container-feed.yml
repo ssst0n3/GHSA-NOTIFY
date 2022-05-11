@@ -1,0 +1,27 @@
+name: Container Security Feed
+on:
+  push:
+    tags-ignore: 
+      - "**"
+  schedule:
+    - cron: '*/5 * * * *'  # every 5 mins
+
+jobs:
+  container_feed_job:
+    runs-on: ubuntu-latest
+    name: A job to update container security feed
+    steps:
+      - uses: actions/checkout@v2
+      - name: update container feed
+        uses:  docker://ghcr.io/ssst0n3/ghsa-notify:v1
+        env:
+          GHTOKEN: ${{ secrets.github_token }}
+          feed: "feed/container.xml"
+          packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/opencontainers/runc","github.com/containerd/imgcrypt","CRI-O"]'
+      - name: Commit
+        run: |
+          git config --global user.name ${{ github.repository_owner }}
+          git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
+          git add feed/container.xml
+          git commit -m "Automated update container feed"
+          git push origin main
