@@ -1,5 +1,8 @@
 name: Container Security Feed
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: '*/5 * * * *'  # every 5 mins
 
 jobs:
   container_feed_job:
