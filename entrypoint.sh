@@ -2,7 +2,7 @@
 set -ex
 env
 mkdir -p repo
-git clone -o repo ${GITHUB_REPOSITORY}
+git clone -o repo ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
 cd repo
 
 /notifier
