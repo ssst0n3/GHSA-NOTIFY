@@ -8,10 +8,23 @@ import (
 	"os"
 )
 
-func main() {
+func Common() {
 	var packages []string
 	awesome_error.CheckFatal(json.Unmarshal([]byte(os.Getenv("packages")), &packages))
+	feedFilePath := os.Getenv("feed")
+	token := os.Getenv("GHTOKEN")
+
+	var securityVulnerabilities []ghsa.SecurityVulnerability
 	for _, pkg := range packages {
-		ghsa.ListSecurityVulnerabilities(client.New(os.Getenv("GHTOKEN")), pkg, 10)
+		query := ghsa.ListSecurityVulnerabilities(client.New(token), pkg, 10)
+		securityVulnerabilities = append(securityVulnerabilities, query.SecurityVulnerabilityConnection.Nodes...)
 	}
+	feed, err := ghsa.UpdateFeed(securityVulnerabilities)
+	awesome_error.CheckFatal(err)
+	err = ghsa.WriteRss(feed, feedFilePath)
+	awesome_error.CheckFatal(err)
+}
+
+func main() {
+	Common()
 }
