@@ -10,7 +10,8 @@ Add these files to your rss reader:
     * github.com/opencontainers/runc
     * github.com/containerd/imgcrypt
     * CRI-O
-    * if you find more packages, please pull a request 
+    * if you find more packages, please pull a request
+* for other softwares, please pull a request
 
 ## For Developer
 
