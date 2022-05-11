@@ -12,5 +12,3 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    GREET: ${{ inputs.who-to-greet }}

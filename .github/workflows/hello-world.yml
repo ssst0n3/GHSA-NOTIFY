@@ -10,6 +10,10 @@ jobs:
         uses: ssst0n3/GHSA-NOTIFY@v1.1
         with:
           who-to-greet: 'GHSA'
+        env:
+          GHTOKEN: ${{ secrets.github_token }}
+          feed: "output/container.xml"
+          packages: '["github.com/docker/docker"]'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
