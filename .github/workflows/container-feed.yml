@@ -18,8 +18,8 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: cat repo/output/container.xml
+      - uses: actions/checkout@v2
       - name: Create report file
-        uses: actions/checkout@v2
         run: cat repo/output/container.xml
       - name: Commit report
         run: |
