@@ -8,9 +8,9 @@ cd repo
 /notifier
 ls -lah output
 
-git config --global user.email "ssst0n3@gmail.com"
-git config --global user.name ${GITHUB_REPOSITORY_OWNER}
-git config --global user.password ${GHTOKEN}
-git add .
-git commit -m "container.xml updated by github action"
-git push
+#git config --global user.email "ssst0n3@gmail.com"
+#git config --global user.name ${GITHUB_REPOSITORY_OWNER}
+#git config --global user.password ${GHTOKEN}
+#git add .
+#git commit -m "container.xml updated by github action"
+#git push
