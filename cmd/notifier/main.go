@@ -20,10 +20,14 @@ func Common() {
 		query := ghsa.ListSecurityVulnerabilitiesByPackage(client.New(token), pkg, 10)
 		securityVulnerabilities = append(securityVulnerabilities, query.SecurityVulnerabilityConnection.Nodes...)
 	}
-	feed, err := ghsa.UpdateFeed(securityVulnerabilities)
+	feed, err := ghsa.GenerateNewFeed(securityVulnerabilities)
 	awesome_error.CheckFatal(err)
-	err = ghsa.WriteRss(feed, feedFilePath)
+	equal, err := ghsa.CompareFeed(*feed, feedFilePath)
 	awesome_error.CheckFatal(err)
+	if !equal {
+		err = ghsa.WriteRss(feed, feedFilePath)
+		awesome_error.CheckFatal(err)
+	}
 }
 
 func main() {

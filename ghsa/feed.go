@@ -1,13 +1,39 @@
 package ghsa
 
 import (
+	"encoding/xml"
 	"github.com/gorilla/feeds"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"io/ioutil"
 	"time"
 )
 
-func UpdateFeed(securityVulnerabilities []SecurityVulnerability) (feed *feeds.Feed, err error) {
+func ParseRss(filepath string) (rss feeds.RssFeedXml, err error) {
+	content, err := ioutil.ReadFile(filepath)
+	if err != nil {
+		awesome_error.CheckErr(err)
+		return
+	}
+	err = xml.Unmarshal(content, &rss)
+	if err != nil {
+		awesome_error.CheckErr(err)
+		return
+	}
+	return
+}
+
+func CompareFeed(newFeed feeds.Feed, oldFeedFile string) (equal bool, err error) {
+	oldRss, err := ParseRss(oldFeedFile)
+	if err != nil {
+		return
+	}
+	newRss := (&feeds.Rss{Feed: &newFeed}).FeedXml().(*feeds.RssFeedXml)
+	oldRss.Channel.PubDate = newRss.Channel.PubDate
+	equal = *newRss == oldRss
+	return
+}
+
+func GenerateNewFeed(securityVulnerabilities []SecurityVulnerability) (feed *feeds.Feed, err error) {
 	now := time.Now()
 	feed = &feeds.Feed{
 		Title:       "Container Software GHSA Feeds",
@@ -15,6 +41,7 @@ func UpdateFeed(securityVulnerabilities []SecurityVulnerability) (feed *feeds.Fe
 		Description: "",
 		Author:      &feeds.Author{Name: "ssst0n3", Email: "ssst0n3@gmail.com"},
 		Created:     now,
+		//Updated:     now,
 	}
 
 	feed.Items = []*feeds.Item{}
