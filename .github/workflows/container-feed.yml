@@ -1,8 +1,6 @@
 name: Container Security Feed
 on:
-  push:
-    tags-ignore:
-      - '**'
+  workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'  # every 5 mins
 
