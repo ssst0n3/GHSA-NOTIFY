@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 13 May 2022 12:48:07 +0000</pubDate>
+    <pubDate>Fri, 13 May 2022 18:56:49 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -63,19 +63,19 @@
       <title>containerd CRI plugin: Insecure handling of image volumes</title>
       <link>https://github.com/advisories/GHSA-crp2-qrr5-8pq7</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd where containers launched through containerd’s CRI implementation with a specially-crafted image configuration could gain access to read-only copies of arbitrary files and directories on the host.  This may bypass any policy-based enforcement on container setup (including a Kubernetes Pod Security Policy) and expose potentially sensitive information.  Kubernetes and crictl can both be configured to use containerd’s CRI implementation.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.1, 1.5.10 and 1.4.13.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images are used.&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank Felix Wilhelm of Google Project Zero for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md).&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Tue, 29 Mar 2022 19:11:09 +0000</pubDate>
+      <pubDate>Fri, 13 May 2022 18:50:26 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI plugin: Insecure handling of image volumes</title>
       <link>https://github.com/advisories/GHSA-crp2-qrr5-8pq7</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd where containers launched through containerd’s CRI implementation with a specially-crafted image configuration could gain access to read-only copies of arbitrary files and directories on the host.  This may bypass any policy-based enforcement on container setup (including a Kubernetes Pod Security Policy) and expose potentially sensitive information.  Kubernetes and crictl can both be configured to use containerd’s CRI implementation.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.1, 1.5.10 and 1.4.13.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images are used.&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank Felix Wilhelm of Google Project Zero for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md).&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Tue, 29 Mar 2022 19:11:09 +0000</pubDate>
+      <pubDate>Fri, 13 May 2022 18:50:26 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI plugin: Insecure handling of image volumes</title>
       <link>https://github.com/advisories/GHSA-crp2-qrr5-8pq7</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd where containers launched through containerd’s CRI implementation with a specially-crafted image configuration could gain access to read-only copies of arbitrary files and directories on the host.  This may bypass any policy-based enforcement on container setup (including a Kubernetes Pod Security Policy) and expose potentially sensitive information.  Kubernetes and crictl can both be configured to use containerd’s CRI implementation.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.1, 1.5.10 and 1.4.13.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images are used.&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank Felix Wilhelm of Google Project Zero for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md).&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Tue, 29 Mar 2022 19:11:09 +0000</pubDate>
+      <pubDate>Fri, 13 May 2022 18:50:26 +0000</pubDate>
     </item>
     <item>
       <title>Unprivileged pod using `hostPath` can side-step active LSM when it is SELinux</title>
@@ -159,7 +159,7 @@
       <title>Incorrect Authorization in imgcrypt</title>
       <link>https://github.com/advisories/GHSA-8v99-48m9-c8pm</link>
       <description>Imgcrypt implements a function `CheckAuthorization()` that is supposed to check whether a user is authorized to access an encrypted image given the keys that the user has provided on the command line that would enable decryption of the image. The check is to prevent that a user can start a container from an image that has previously been decrypted by another user on the same system and therefore a decrypted version of the image layers may be already available in the cache locally.&#xA;&#xA;The failure occurs when an image with a ManifestList is used and the architecture of the local host is not the first one in the ManifestList. In the version prior to the fix, only the first architecture in the list was tested, which may not have its layers available locally (were not pulled) since it cannot be run on the host architecture. Therefore, the verdict on unavailable layers was that the image could be run anticipating that image run failure would occur later due to the layers not being available. However, this verdict to allow the image to run lead to other architectures in the ManifestList be able to run an image without providing keys if that image had previously been decrypted. The fixed version now skips over irrelevant architectures and tests the Manifest of the local architecture, if available.&#xA;&#xA;Known projects that use the `CheckAuthorization()` of imgcrypt is for example the ctr-enc client tool provided by imgcrypt. In this implementation, the call to `CheckAuthorization()` is used on the client side and could therefore also be easily circumvented by a modified client tool not calling this function.&#xA;&#xA;In relation to the vulnerability in ctr-enc, affected environments would have to allow different users to invoke ctr-enc indirectly using some sort of management stack that gives user indirect access to ctr-enc.&#xA;&#xA;The patch has been applied to imgcrypt v1.1.4. Workarounds may include usage of different namespaces for each remote user.</description>
-      <pubDate>Wed, 13 Apr 2022 03:57:34 +0000</pubDate>
+      <pubDate>Fri, 13 May 2022 18:50:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
