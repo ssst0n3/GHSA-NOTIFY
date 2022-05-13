@@ -2,6 +2,7 @@ package ghsa
 
 import (
 	"encoding/xml"
+	"github.com/davecgh/go-spew/spew"
 	"github.com/gorilla/feeds"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"io/ioutil"
@@ -26,6 +27,8 @@ func CompareFeed(newFeed feeds.Feed, oldFeedFile string) (equal bool, err error)
 	oldRss, _ := ParseRss(oldFeedFile)
 	newRss := (&feeds.Rss{Feed: &newFeed}).FeedXml().(*feeds.RssFeedXml)
 	oldRss.Channel.PubDate = newRss.Channel.PubDate
+	spew.Dump(oldRss)
+	spew.Dump(newRss)
 	equal = *newRss == oldRss
 	return
 }
