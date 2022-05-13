@@ -19,6 +19,7 @@ jobs:
           feed: "feed/container.xml"
           packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/opencontainers/runc","github.com/containerd/imgcrypt","CRI-O"]'
       - name: Commit
+        shell: /usr/bin/bash {0}
         run: |
           git config --global user.name ${{ github.repository_owner }}
           git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
