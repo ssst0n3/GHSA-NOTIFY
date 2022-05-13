@@ -3,8 +3,6 @@ on:
   push:
     paths:
       - '.feed.manual'
-    tags-ignore: 
-      - "**"
   schedule:
     - cron: '*/5 * * * *'  # every 5 mins
 
