@@ -3,15 +3,19 @@
 ## Usage
 Add these files to your rss reader: 
 
-* for container software security advisories: https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/feed/container.xml
-  * packages listened now:
-    * github.com/docker/docker
-    * github.com/containerd/containerd
-    * github.com/opencontainers/runc
-    * github.com/containerd/imgcrypt
-    * CRI-O
-    * if you find more packages, please pull a request
-* for other softwares, please pull a request
+### Container Software Security Advisories
+[![Container Security Feed](https://github.com/ssst0n3/GHSA-NOTIFY/actions/workflows/container-feed.yml/badge.svg?branch=main)](https://github.com/ssst0n3/GHSA-NOTIFY/actions/workflows/container-feed.yml)
+
+https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/feed/container.xml
+
+* packages listened now:
+  * github.com/docker/docker
+  * github.com/containerd/containerd
+  * github.com/opencontainers/runc
+  * github.com/containerd/imgcrypt
+  * CRI-O
+  * if you find more packages, please pull a request
+### for other softwares, please pull a request
 
 ## For Developer
 
