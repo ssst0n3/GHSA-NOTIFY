@@ -16,7 +16,6 @@ func Common() {
 
 	var securityVulnerabilities []ghsa.SecurityVulnerability
 	for _, pkg := range packages {
-		ghsa.ListSecurityVulnerabilitiesByPackage(client.New(os.Getenv("GHTOKEN")), pkg, 10)
 		query := ghsa.ListSecurityVulnerabilitiesByPackage(client.New(token), pkg, 10)
 		securityVulnerabilities = append(securityVulnerabilities, query.SecurityVulnerabilityConnection.Nodes...)
 	}
