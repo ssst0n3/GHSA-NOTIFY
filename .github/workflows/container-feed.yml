@@ -1,6 +1,8 @@
 name: Container Security Feed
 on:
   push:
+    paths:
+      - '.feed.manual'
     tags-ignore: 
       - "**"
   schedule:

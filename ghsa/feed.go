@@ -23,10 +23,7 @@ func ParseRss(filepath string) (rss feeds.RssFeedXml, err error) {
 }
 
 func CompareFeed(newFeed feeds.Feed, oldFeedFile string) (equal bool, err error) {
-	oldRss, err := ParseRss(oldFeedFile)
-	if err != nil {
-		return
-	}
+	oldRss, _ := ParseRss(oldFeedFile)
 	newRss := (&feeds.Rss{Feed: &newFeed}).FeedXml().(*feeds.RssFeedXml)
 	oldRss.Channel.PubDate = newRss.Channel.PubDate
 	equal = *newRss == oldRss
