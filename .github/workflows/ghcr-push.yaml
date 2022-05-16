@@ -8,8 +8,6 @@ on:
     tags:
       - '**'
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'  # every day at midnight
 env:
     IMAGE_NAME: ghsa-notify
     IMAGE_TAGS: v1 ${{ github.sha }}
