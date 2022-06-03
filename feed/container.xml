@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 26 May 2022 20:15:53 +0000</pubDate>
+    <pubDate>Fri, 03 Jun 2022 21:13:00 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -123,7 +123,7 @@
       <title>Default inheritable capabilities for linux container should be empty</title>
       <link>https://github.com/advisories/GHSA-f3fp-gc8g-vw66</link>
       <description>### Impact&#xA;&#xA;A bug was found in runc where `runc exec --cap` executed processes with non-empty inheritable Linux process capabilities, creating an atypical Linux environment and enabling programs with inheritable file capabilities to elevate those capabilities to the permitted set during execve(2).&#xA;&#xA;This bug did not affect the container security sandbox as the inheritable set never contained more capabilities than were included in the container&#39;s bounding set.&#xA;&#xA;### Patches&#xA;This bug has been fixed in runc 1.1.2. Users should update to this version as soon as possible.&#xA;&#xA;This fix changes `runc exec --cap` behavior such that the additional capabilities granted to the process being executed (as specified via `--cap` arguments) do not include inheritable capabilities.&#xA;&#xA;In addition, `runc spec` is changed to not set any inheritable capabilities in the created example OCI spec (`config.json`) file.&#xA;&#xA;### Credits&#xA;The opencontainers project would like to thank [Andrew G. Morgan](https://github.com/AndrewGMorgan) for responsibly disclosing this issue in accordance with the [opencontainers org security policy](https://github.com/opencontainers/.github/blob/master/SECURITY.md).&#xA;&#xA;### For more information&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/opencontainers/runc/issues/new)&#xA;* Email us at [security@opencontainers.org](mailto:security@opencontainers.org) if you think you’ve found a security bug</description>
-      <pubDate>Tue, 24 May 2022 17:36:58 +0000</pubDate>
+      <pubDate>Fri, 03 Jun 2022 21:08:34 +0000</pubDate>
     </item>
     <item>
       <title>Incorrect Authorization in runc</title>
