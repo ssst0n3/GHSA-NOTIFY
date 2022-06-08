@@ -9,7 +9,7 @@ import (
 
 func TestListSecurityVulnerabilitiesByPackage(t *testing.T) {
 	c := client.New(os.Getenv("GHTOKEN_TEST"))
-	q := ListSecurityVulnerabilitiesByPackage(c, "github.com/docker/docker", 10)
+	q := ListSecurityVulnerabilitiesByPackage(c, "github.com/cri-o/cri-o", 100)
 	spew.Dump(q)
 }
 

@@ -15,7 +15,7 @@ jobs:
         env:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "feed/container.xml"
-          packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/opencontainers/runc","github.com/containerd/imgcrypt","CRI-O"]'
+          packages: '["github.com/docker/docker","github.com/containerd/containerd","github.com/opencontainers/runc","github.com/containerd/imgcrypt","CRI-O","github.com/cri-o/cri-o"]'
       - name: Commit
         shell: /usr/bin/bash {0}
         run: |
