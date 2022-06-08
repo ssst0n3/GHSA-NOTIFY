@@ -16,7 +16,7 @@ func Common() {
 
 	var securityVulnerabilities []ghsa.SecurityVulnerability
 	for _, pkg := range packages {
-		query := ghsa.ListSecurityVulnerabilitiesByPackage(client.New(token), pkg, 10)
+		query := ghsa.ListSecurityVulnerabilitiesByPackage(client.New(token), pkg, 100)
 		securityVulnerabilities = append(securityVulnerabilities, query.SecurityVulnerabilityConnection.Nodes...)
 	}
 	feed, err := ghsa.GenerateNewFeed(securityVulnerabilities)
