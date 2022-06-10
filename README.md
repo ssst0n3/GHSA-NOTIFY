@@ -14,7 +14,9 @@ https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/feed/container.xml
   * github.com/opencontainers/runc
   * github.com/containerd/imgcrypt
   * CRI-O
-  * if you find more packages, please pull a request
+  * if you find more packages, please pull a request to update [this workflow file](https://github.com/ssst0n3/GHSA-NOTIFY/blob/main/.github/workflows/container-feed.yml#L18)
+
+
 ### for other softwares, please pull a request
 
 ## For Developer
