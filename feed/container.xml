@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 15 Jun 2022 19:45:03 +0000</pubDate>
+    <pubDate>Fri, 17 Jun 2022 18:56:26 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -63,13 +63,13 @@
       <title>containerd CRI plugin: Host memory exhaustion through ExecSync</title>
       <link>https://github.com/advisories/GHSA-5ffw-gxpp-mxpf</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd&#39;s CRI implementation where programs inside a container can cause the containerd daemon to consume memory without bound during invocation of the `ExecSync` API.  This can cause containerd to consume all available memory on the computer, denying service to other legitimate workloads.  Kubernetes and crictl can both be configured to use containerd&#39;s CRI implementation; `ExecSync` may be used when running probes or when executing processes via an &#34;exec&#34; facility.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.6 and 1.5.13.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images and commands are used. &#xA;&#xA;### References&#xA;&#xA;* Similar fix in cri-o&#39;s CRI implementation https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank David Korczynski and Adam Korczynski of ADA Logics for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md) during a security audit sponsored by CNCF and facilitated by OSTIF.&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Wed, 15 Jun 2022 19:42:24 +0000</pubDate>
+      <pubDate>Fri, 17 Jun 2022 18:45:54 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI plugin: Host memory exhaustion through ExecSync</title>
       <link>https://github.com/advisories/GHSA-5ffw-gxpp-mxpf</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd&#39;s CRI implementation where programs inside a container can cause the containerd daemon to consume memory without bound during invocation of the `ExecSync` API.  This can cause containerd to consume all available memory on the computer, denying service to other legitimate workloads.  Kubernetes and crictl can both be configured to use containerd&#39;s CRI implementation; `ExecSync` may be used when running probes or when executing processes via an &#34;exec&#34; facility.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.6 and 1.5.13.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images and commands are used. &#xA;&#xA;### References&#xA;&#xA;* Similar fix in cri-o&#39;s CRI implementation https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank David Korczynski and Adam Korczynski of ADA Logics for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md) during a security audit sponsored by CNCF and facilitated by OSTIF.&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Wed, 15 Jun 2022 19:42:24 +0000</pubDate>
+      <pubDate>Fri, 17 Jun 2022 18:45:54 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI plugin: Insecure handling of image volumes</title>
