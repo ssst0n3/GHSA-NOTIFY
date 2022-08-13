@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 17 Jun 2022 18:56:26 +0000</pubDate>
+    <pubDate>Sat, 13 Aug 2022 03:36:34 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -15,37 +15,37 @@
       <title>Privilege Escalation in Docker</title>
       <link>https://github.com/advisories/GHSA-wxj3-qwv4-cvfm</link>
       <description>Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.</description>
-      <pubDate>Tue, 15 Feb 2022 00:40:44 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:08 +0000</pubDate>
     </item>
     <item>
       <title>Arbitrary Code Execution in Docker</title>
       <link>https://github.com/advisories/GHSA-5qgp-p5jc-w2rm</link>
       <description>Docker before 1.3.2 allows remote attackers to write to arbitrary files and execute arbitrary code via a (1) symlink or (2) hard link attack in an image archive in a (a) pull or (b) load operation.</description>
-      <pubDate>Tue, 15 Feb 2022 00:41:12 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:22 +0000</pubDate>
     </item>
     <item>
       <title>Directory Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-qmmc-jppf-32wv</link>
       <description>Docker before 1.3.3 does not properly validate image IDs, which allows remote attackers to conduct path traversal attacks and spoof repositories via a crafted image in a (1) &#34;docker load&#34; operation or (2) &#34;registry communications.&#34;</description>
-      <pubDate>Tue, 15 Feb 2022 00:41:14 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:22 +0000</pubDate>
     </item>
     <item>
       <title>Symlink Attack in Libcontainer and Docker Engine</title>
       <link>https://github.com/advisories/GHSA-g7v2-2qxx-wjrw</link>
       <description>Libcontainer and Docker Engine before 1.6.1 opens the file-descriptor passed to the pid-1 process before performing the chroot, which allows local users to gain privileges via a symlink attack in an image.</description>
-      <pubDate>Tue, 15 Feb 2022 01:18:02 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:45 +0000</pubDate>
     </item>
     <item>
       <title>Access Restriction Bypass in Docker</title>
       <link>https://github.com/advisories/GHSA-44gg-pmqr-4669</link>
       <description>Docker 1.3.0 through 1.3.1 allows remote attackers to modify the default run profile of image containers and possibly bypass the container by applying unspecified security options to an image.</description>
-      <pubDate>Tue, 12 Apr 2022 22:38:18 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:07 +0000</pubDate>
     </item>
     <item>
       <title>Arbitrary File Write in Libcontainer</title>
       <link>https://github.com/advisories/GHSA-g44j-7vp3-68cv</link>
       <description>Libcontainer 1.6.0, as used in Docker Engine, allows local users to escape containerization (&#34;mount namespace breakout&#34;) and write to arbitrary file on the host system via a symlink attack in an image when respawning a container.</description>
-      <pubDate>Tue, 12 Apr 2022 22:13:08 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:07 +0000</pubDate>
     </item>
     <item>
       <title>Man-in-the-Middle (MitM)</title>
@@ -57,7 +57,7 @@
       <title>Arbitrary Code Execution</title>
       <link>https://github.com/advisories/GHSA-997c-fj8j-rq5h</link>
       <description>Docker 1.3.2 allows remote attackers to execute arbitrary code with root privileges via a crafted (1) image or (2) build in a Dockerfile in an LZMA (.xz) archive, related to the chroot for archive extraction.</description>
-      <pubDate>Tue, 12 Apr 2022 22:01:45 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:38 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI plugin: Host memory exhaustion through ExecSync</title>
@@ -141,13 +141,13 @@
       <title>containerd-shim API Exposed to Host Network Containers</title>
       <link>https://github.com/advisories/GHSA-36xw-fx78-c5r4</link>
       <description>## Impact&#xA;&#xA;Access controls for the shim’s API socket verified that the connecting process had an effective UID of 0, but did not otherwise restrict access to the abstract Unix domain socket. This would allow malicious containers running in the same network namespace as the shim, with an effective UID of 0 but otherwise reduced privileges, to cause new processes to be run with elevated privileges.&#xA;&#xA;## Patches&#xA;&#xA;This vulnerability has been fixed in containerd 1.3.9 and 1.4.3.  Users should update to these versions as soon as they are released.  It should be noted that containers started with an old version of containerd-shim should be stopped and restarted, as running containers will continue to be vulnerable even after an upgrade.&#xA;&#xA;## Workarounds&#xA;&#xA;If you are not providing the ability for untrusted users to start containers in the same network namespace as the shim (typically the &#34;host&#34; network namespace, for example with `docker run --net=host` or `hostNetwork: true` in a Kubernetes pod) and run with an effective UID of 0, you are not vulnerable to this issue.&#xA;&#xA;If you are running containers with a vulnerable configuration, you can deny access to all abstract sockets with AppArmor by adding a line similar to `deny unix addr=@**,` to your policy.&#xA;&#xA;It is best practice to run containers with a reduced set of privileges, with a non-zero UID, and with isolated namespaces.  The containerd maintainers strongly advise against sharing namespaces with the host. Reducing the set of isolation mechanisms used for a container necessarily increases that container&#39;s privilege, regardless of what container runtime is used for running that container.&#xA;&#xA;## Credits&#xA;&#xA;The containerd maintainers would like to thank Jeff Dileo of NCC Group for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/master/SECURITY.md) and for reviewing the patch.&#xA;&#xA;## For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at security@containerd.io if you think you’ve found a security bug.</description>
-      <pubDate>Tue, 19 Apr 2022 19:02:38 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:48 +0000</pubDate>
     </item>
     <item>
       <title>containerd-shim API Exposed to Host Network Containers</title>
       <link>https://github.com/advisories/GHSA-36xw-fx78-c5r4</link>
       <description>## Impact&#xA;&#xA;Access controls for the shim’s API socket verified that the connecting process had an effective UID of 0, but did not otherwise restrict access to the abstract Unix domain socket. This would allow malicious containers running in the same network namespace as the shim, with an effective UID of 0 but otherwise reduced privileges, to cause new processes to be run with elevated privileges.&#xA;&#xA;## Patches&#xA;&#xA;This vulnerability has been fixed in containerd 1.3.9 and 1.4.3.  Users should update to these versions as soon as they are released.  It should be noted that containers started with an old version of containerd-shim should be stopped and restarted, as running containers will continue to be vulnerable even after an upgrade.&#xA;&#xA;## Workarounds&#xA;&#xA;If you are not providing the ability for untrusted users to start containers in the same network namespace as the shim (typically the &#34;host&#34; network namespace, for example with `docker run --net=host` or `hostNetwork: true` in a Kubernetes pod) and run with an effective UID of 0, you are not vulnerable to this issue.&#xA;&#xA;If you are running containers with a vulnerable configuration, you can deny access to all abstract sockets with AppArmor by adding a line similar to `deny unix addr=@**,` to your policy.&#xA;&#xA;It is best practice to run containers with a reduced set of privileges, with a non-zero UID, and with isolated namespaces.  The containerd maintainers strongly advise against sharing namespaces with the host. Reducing the set of isolation mechanisms used for a container necessarily increases that container&#39;s privilege, regardless of what container runtime is used for running that container.&#xA;&#xA;## Credits&#xA;&#xA;The containerd maintainers would like to thank Jeff Dileo of NCC Group for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/master/SECURITY.md) and for reviewing the patch.&#xA;&#xA;## For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at security@containerd.io if you think you’ve found a security bug.</description>
-      <pubDate>Tue, 19 Apr 2022 19:02:38 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:48 +0000</pubDate>
     </item>
     <item>
       <title>Default inheritable capabilities for linux container should be empty</title>
@@ -171,7 +171,7 @@
       <title>devices resource list treated as a blacklist by default</title>
       <link>https://github.com/advisories/GHSA-g54h-m393-cpwq</link>
       <description>### Impact&#xA;Contrary to the [OCI runtime specification](https://github.com/opencontainers/runtime-spec/blob/v1.0.2/config-linux.md#device-whitelist), `runc`&#39;s implementation of the `linux.resources.devices` list was a black-list by default. This means that users who created their own `config.json` objects and didn&#39;t prefix a deny-all rule (`{&#34;allow&#34;: false, &#34;permissions&#34;: &#34;rwm&#34;}` or equivalent) were not provided protection by the `devices` cgroup. This would allow malicious containers (with sufficient privileges) to create arbitrary device inodes (assuming they have `CAP_MKNOD`) and operate on any device inodes they may have access to (assuming they have regular Unix DAC permissions).&#xA;&#xA;However, most (if not all) programs that make use of `runc` include this deny-all rule. This was most likely added before the specification mandated a white-list of devices, and the fact that all programs wrote their own deny-all rule obscured the existence of this bug for several years. In fact, even the specification&#39;s examples include a default deny-all rule! We therefore believe that while this is a security bug (and has been fixed as such), it was almost certainly not exploitable in the wild due to the inclusion of default deny-all rules by all known users of `runc` -- hence why this advisory has low severity.&#xA;&#xA;### Patches&#xA;This issue has been fixed in [a patch that was part of a larger rework of the devices cgroup code in runc](https://github.com/opencontainers/runc/pull/2391) -- which lead to the discovery of this security bug. Users should upgrade to 1.0.0-rc91 as soon as it is released, or wait for your distribution to backport the relevant fixes.&#xA;&#xA;### Workarounds&#xA;If you are using `runc` directly, ensure that there is a deny-all entry at the beginning of `linux.resources.devices` -- such an entry would look like `{&#34;allow&#34;: false, &#34;permissions&#34;: &#34;rwm&#34;}` (all other fields are ignored, though `type` must be set to `&#34;a&#34;` or `null` if it is present).&#xA;&#xA;Users which consume `runc` through another program should check whether their containers are operating under a white-list -- this can be done by reading `/sys/fs/cgroup/devices/devices.list` inside the container. If the file contains only the entry `a *:* rwm` (meaning the cgroup is in black-list mode, which likely means &#34;allow all device access&#34;) then your containers are vulnerable to this issue.&#xA;&#xA;As always, we recommend **in the strongest possible terms** that all of our users enable user namespaces on all of their workloads (or pressure their vendors to do so). User namespaces are one of the most significant defense-in-depth protections you can enable for containers, and have prevented many container-related vulnerabilities (both kernel 0days as well as bugs in container runtimes, such as this one).&#xA;&#xA;### References&#xA;* https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v1/devices.html&#xA;* [opencontainers/runtime-spec/config-linux.md#device-whitelist](https://github.com/opencontainers/runtime-spec/blob/v1.0.2/config-linux.md#device-whitelist)&#xA;* https://github.com/opencontainers/runc/pull/2391&#xA;&#xA;### For more information&#xA;If you have any questions or comments about this advisory:&#xA;* [Open an issue in this repo](https://github.com/opencontainers/runc/issues/new).&#xA;* Email us at &lt;security@opencontainers.org&gt;.</description>
-      <pubDate>Tue, 19 Apr 2022 19:02:28 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:10 +0000</pubDate>
     </item>
     <item>
       <title>mount destinations can be swapped via symlink-exchange to cause mounts outside the rootfs</title>
@@ -189,7 +189,7 @@
       <title>Information Exposure in RunC</title>
       <link>https://github.com/advisories/GHSA-gp4j-w3vj-7299</link>
       <description>RunC allowed additional container processes via &#39;runc exec&#39; to be ptraced by the pid 1 of the container.  This allows the main processes of the container, if running as root, to gain access to file-descriptors of these new processes during the initialization and can lead to container escapes or modification of runC state before the process is fully placed inside the container.</description>
-      <pubDate>Mon, 20 Dec 2021 18:21:43 +0000</pubDate>
+      <pubDate>Sat, 13 Aug 2022 03:06:38 +0000</pubDate>
     </item>
     <item>
       <title>Incorrect Authorization in imgcrypt</title>
