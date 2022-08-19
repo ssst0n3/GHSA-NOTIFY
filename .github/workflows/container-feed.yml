@@ -2,7 +2,7 @@ name: Container Security Feed
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'  # every 5 mins
+    - cron: '* */1 * * *'  # every 1 hour
 
 jobs:
   container_feed_job:
