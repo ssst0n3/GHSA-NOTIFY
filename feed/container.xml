@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 21 Sep 2022 17:48:08 +0000</pubDate>
+    <pubDate>Thu, 22 Sep 2022 17:48:50 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -201,7 +201,7 @@
       <title>CRI-O incorrect handling of supplementary groups may lead to sensitive information disclosure</title>
       <link>https://github.com/advisories/GHSA-phjr-8j92-w5v7</link>
       <description>Incorrect handling of the supplementary groups in the CRI-O container engine might lead to sensitive information disclosure or possible data modification if an attacker has direct access to the affected container where supplementary groups are used to set access permissions and is able to execute a binary code in that container.</description>
-      <pubDate>Wed, 21 Sep 2022 17:46:31 +0000</pubDate>
+      <pubDate>Thu, 22 Sep 2022 17:22:58 +0000</pubDate>
     </item>
     <item>
       <title>Node DOS by way of memory exhaustion through ExecSync request in CRI-O</title>
