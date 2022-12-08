@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 07 Dec 2022 23:30:36 +0000</pubDate>
+    <pubDate>Thu, 08 Dec 2022 14:25:14 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -63,13 +63,13 @@
       <title>containerd CRI stream server vulnerable to host memory exhaustion via terminal</title>
       <link>https://github.com/advisories/GHSA-2qjp-425j-52j9</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd&#39;s CRI implementation where a user can exhaust memory on the host. In the CRI stream server, a goroutine is launched to handle terminal resize events if a TTY is requested. If the user&#39;s process fails to launch due to, for example, a faulty command, the goroutine will be stuck waiting to send without a receiver, resulting in a memory leak. Kubernetes and crictl can both be configured to use containerd&#39;s CRI implementation and the stream server is used for handling container IO.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.12 and 1.5.16.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images and commands are used and that only trusted users have permissions to execute commands in running containers. &#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)&#xA;&#xA;To report a security issue in containerd:&#xA;* [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Wed, 07 Dec 2022 23:23:44 +0000</pubDate>
+      <pubDate>Thu, 08 Dec 2022 14:07:34 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI stream server vulnerable to host memory exhaustion via terminal</title>
       <link>https://github.com/advisories/GHSA-2qjp-425j-52j9</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd&#39;s CRI implementation where a user can exhaust memory on the host. In the CRI stream server, a goroutine is launched to handle terminal resize events if a TTY is requested. If the user&#39;s process fails to launch due to, for example, a faulty command, the goroutine will be stuck waiting to send without a receiver, resulting in a memory leak. Kubernetes and crictl can both be configured to use containerd&#39;s CRI implementation and the stream server is used for handling container IO.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.6.12 and 1.5.16.  Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Ensure that only trusted images and commands are used and that only trusted users have permissions to execute commands in running containers. &#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)&#xA;&#xA;To report a security issue in containerd:&#xA;* [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)</description>
-      <pubDate>Wed, 07 Dec 2022 23:23:44 +0000</pubDate>
+      <pubDate>Thu, 08 Dec 2022 14:07:34 +0000</pubDate>
     </item>
     <item>
       <title>containerd CRI plugin: Host memory exhaustion through ExecSync</title>
