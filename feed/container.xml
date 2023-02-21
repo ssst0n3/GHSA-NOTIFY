@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 17 Feb 2023 21:33:46 +0000</pubDate>
+    <pubDate>Tue, 21 Feb 2023 05:18:09 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -15,7 +15,7 @@
       <title>Privilege Escalation in Docker</title>
       <link>https://github.com/advisories/GHSA-wxj3-qwv4-cvfm</link>
       <description>Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.</description>
-      <pubDate>Mon, 09 Jan 2023 05:04:48 +0000</pubDate>
+      <pubDate>Tue, 21 Feb 2023 05:06:24 +0000</pubDate>
     </item>
     <item>
       <title>Arbitrary Code Execution in Docker</title>
