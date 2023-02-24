@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Tue, 21 Feb 2023 05:18:09 +0000</pubDate>
+    <pubDate>Fri, 24 Feb 2023 17:09:46 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -195,7 +195,7 @@
       <title>Incorrect Authorization in runc</title>
       <link>https://github.com/advisories/GHSA-fgv8-vj5c-2ppq</link>
       <description>runc through 1.0.0-rc8, as used in Docker through 19.03.2-ce and other products, allows AppArmor restriction bypass because libcontainer/rootfs_linux.go incorrectly checks mount targets, and thus a malicious Docker image can mount over a /proc directory.</description>
-      <pubDate>Mon, 13 Feb 2023 23:43:48 +0000</pubDate>
+      <pubDate>Fri, 24 Feb 2023 17:01:50 +0000</pubDate>
     </item>
     <item>
       <title>Default inheritable capabilities for linux container should be empty</title>
