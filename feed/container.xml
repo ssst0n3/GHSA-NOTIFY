@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 01 Mar 2023 18:55:58 +0000</pubDate>
+    <pubDate>Fri, 10 Mar 2023 15:43:02 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -184,6 +184,12 @@
       <link>https://github.com/advisories/GHSA-36xw-fx78-c5r4</link>
       <description>## Impact&#xA;&#xA;Access controls for the shim’s API socket verified that the connecting process had an effective UID of 0, but did not otherwise restrict access to the abstract Unix domain socket. This would allow malicious containers running in the same network namespace as the shim, with an effective UID of 0 but otherwise reduced privileges, to cause new processes to be run with elevated privileges.&#xA;&#xA;## Patches&#xA;&#xA;This vulnerability has been fixed in containerd 1.3.9 and 1.4.3.  Users should update to these versions as soon as they are released.  It should be noted that containers started with an old version of containerd-shim should be stopped and restarted, as running containers will continue to be vulnerable even after an upgrade.&#xA;&#xA;## Workarounds&#xA;&#xA;If you are not providing the ability for untrusted users to start containers in the same network namespace as the shim (typically the &#34;host&#34; network namespace, for example with `docker run --net=host` or `hostNetwork: true` in a Kubernetes pod) and run with an effective UID of 0, you are not vulnerable to this issue.&#xA;&#xA;If you are running containers with a vulnerable configuration, you can deny access to all abstract sockets with AppArmor by adding a line similar to `deny unix addr=@**,` to your policy.&#xA;&#xA;It is best practice to run containers with a reduced set of privileges, with a non-zero UID, and with isolated namespaces.  The containerd maintainers strongly advise against sharing namespaces with the host. Reducing the set of isolation mechanisms used for a container necessarily increases that container&#39;s privilege, regardless of what container runtime is used for running that container.&#xA;&#xA;## Credits&#xA;&#xA;The containerd maintainers would like to thank Jeff Dileo of NCC Group for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/master/SECURITY.md) and for reviewing the patch.&#xA;&#xA;## For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at security@containerd.io if you think you’ve found a security bug.</description>
       <pubDate>Wed, 01 Feb 2023 05:05:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>Opencontainers runc Incorrect Authorization vulnerability</title>
+      <link>https://github.com/advisories/GHSA-vpvm-3wq2-2wvm</link>
+      <description>runc through 1.1.4 has Incorrect Access Control leading to Escalation of Privileges, related to `libcontainer/rootfs_linux.go`. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. NOTE: this issue exists because of a CVE-2019-19921 regression.</description>
+      <pubDate>Fri, 10 Mar 2023 15:31:24 +0000</pubDate>
     </item>
     <item>
       <title>opencontainers runc contains procfs race condition with a shared volume mount</title>
