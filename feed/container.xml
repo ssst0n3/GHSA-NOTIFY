@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 10 Mar 2023 15:43:02 +0000</pubDate>
+    <pubDate>Mon, 27 Mar 2023 22:19:23 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -189,7 +189,7 @@
       <title>Opencontainers runc Incorrect Authorization vulnerability</title>
       <link>https://github.com/advisories/GHSA-vpvm-3wq2-2wvm</link>
       <description>runc through 1.1.4 has Incorrect Access Control leading to Escalation of Privileges, related to `libcontainer/rootfs_linux.go`. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. NOTE: this issue exists because of a CVE-2019-19921 regression.</description>
-      <pubDate>Fri, 10 Mar 2023 15:31:24 +0000</pubDate>
+      <pubDate>Mon, 27 Mar 2023 22:12:46 +0000</pubDate>
     </item>
     <item>
       <title>opencontainers runc contains procfs race condition with a shared volume mount</title>
@@ -346,6 +346,24 @@
       <link>https://github.com/advisories/GHSA-jqmc-79gx-7g8p</link>
       <description>An incorrect sysctls validation vulnerability was found in CRI-O 1.18 and earlier. The sysctls from the list of &#34;safe&#34; sysctls specified for the cluster will be applied to the host if an attacker is able to create a pod with a hostIPC and hostNetwork kernel namespace.</description>
       <pubDate>Fri, 03 Feb 2023 05:05:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>coreDNS vulnerable to Improper Restriction of Communication Channel to Intended Endpoints</title>
+      <link>https://github.com/advisories/GHSA-h828-v5pv-33qx</link>
+      <description>A flaw was found in coreDNS. This flaw allows a malicious user to redirect traffic intended for external top-level domains (TLD) to a pod they control by creating projects and namespaces that match the TLD.</description>
+      <pubDate>Tue, 14 Mar 2023 19:39:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>coreDNS vulnerable to Improper Restriction of Communication Channel to Intended Endpoints</title>
+      <link>https://github.com/advisories/GHSA-ch7v-37xg-75ph</link>
+      <description>A flaw was found in coreDNS. This flaw allows a malicious user to reroute internal calls to some internal services that were accessed by the FQDN in a format of &lt;service&gt;.&lt;namespace&gt;.svc.</description>
+      <pubDate>Tue, 14 Mar 2023 19:39:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Improper random number generation in github.com/coredns/coredns</title>
+      <link>https://github.com/advisories/GHSA-gv9j-4w24-q7vx</link>
+      <description>### Impact&#xA;&#xA;CoreDNS before 1.6.6 (using go DNS package &lt; 1.1.25) improperly generates random numbers because math/rand is used. The TXID becomes predictable, leading to response forgeries.&#xA;&#xA;### Patches&#xA;The problem has been fixed in 1.6.6+.&#xA;&#xA;### References&#xA;- [CVE-2019-19794](https://nvd.nist.gov/vuln/detail/CVE-2019-19794)&#xA;&#xA;### For more information&#xA;Please consult [our security guide](https://github.com/coredns/coredns/blob/master/.github/SECURITY.md) for more information regarding our security process.&#xA;</description>
+      <pubDate>Wed, 11 Jan 2023 05:05:23 +0000</pubDate>
     </item>
   </channel>
 </rss>
