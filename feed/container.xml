@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 05 Apr 2023 23:21:15 +0000</pubDate>
+    <pubDate>Thu, 06 Apr 2023 23:11:15 +0000</pubDate>
     <item>
       <title>Docker Swarm encrypted overlay network may be unauthenticated</title>
       <link>https://github.com/advisories/GHSA-232p-vwff-86mp</link>
@@ -225,7 +225,7 @@
       <title>runc AppArmor bypass with symlinked /proc</title>
       <link>https://github.com/advisories/GHSA-g2j6-57v7-gm8c</link>
       <description>### Impact&#xA;It was found that AppArmor, and potentially SELinux, can be bypassed when `/proc` inside the container is symlinked with a specific mount configuration.&#xA;&#xA;### Patches&#xA;Fixed in runc v1.1.5, by prohibiting symlinked `/proc`: https://github.com/opencontainers/runc/pull/3785&#xA;&#xA;This PR fixes CVE-2023-27561 as well.&#xA;&#xA;### Workarounds&#xA;Avoid using an untrusted container image.&#xA;&#xA;</description>
-      <pubDate>Thu, 30 Mar 2023 20:20:32 +0000</pubDate>
+      <pubDate>Thu, 06 Apr 2023 22:56:28 +0000</pubDate>
     </item>
     <item>
       <title>rootless: `/sys/fs/cgroup` is writable when cgroupns isn&#39;t unshared in runc</title>
