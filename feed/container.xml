@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Tue, 18 Apr 2023 22:15:38 +0000</pubDate>
+    <pubDate>Fri, 21 Apr 2023 15:06:20 +0000</pubDate>
     <item>
       <title>Docker Swarm encrypted overlay network may be unauthenticated</title>
       <link>https://github.com/advisories/GHSA-232p-vwff-86mp</link>
@@ -237,7 +237,7 @@
       <title>Opencontainers runc Incorrect Authorization vulnerability</title>
       <link>https://github.com/advisories/GHSA-vpvm-3wq2-2wvm</link>
       <description>runc 1.0.0-rc95 through 1.1.4 has Incorrect Access Control leading to Escalation of Privileges, related to `libcontainer/rootfs_linux.go`. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. NOTE: this issue exists because of a CVE-2019-19921 regression.</description>
-      <pubDate>Wed, 29 Mar 2023 14:46:17 +0000</pubDate>
+      <pubDate>Fri, 21 Apr 2023 15:06:08 +0000</pubDate>
     </item>
     <item>
       <title>opencontainers runc contains procfs race condition with a shared volume mount</title>
