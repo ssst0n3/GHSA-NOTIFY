@@ -4,7 +4,13 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Mon, 24 Jul 2023 19:41:06 +0000</pubDate>
+    <pubDate>Tue, 15 Aug 2023 20:18:39 +0000</pubDate>
+    <item>
+      <title>Secret insertion into debug log in Docker</title>
+      <link>https://github.com/advisories/GHSA-j249-ghv5-7mxv</link>
+      <description>In Docker CE and EE before 18.09.8 (as well as Docker EE before 17.06.2-ee-23 and 18.x before 18.03.1-ee-10), Docker Engine in debug mode may sometimes add secrets to the debug log. This applies to a scenario where docker stack deploy is run to redeploy a stack that includes (non external) secrets. It potentially applies to other API users of the stack API if they resend the secret.</description>
+      <pubDate>Tue, 15 Aug 2023 20:17:39 +0000</pubDate>
+    </item>
     <item>
       <title>Docker Swarm encrypted overlay network may be unauthenticated</title>
       <link>https://github.com/advisories/GHSA-232p-vwff-86mp</link>
