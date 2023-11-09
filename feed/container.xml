@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Mon, 30 Oct 2023 15:25:49 +0000</pubDate>
+    <pubDate>Thu, 09 Nov 2023 05:10:17 +0000</pubDate>
     <item>
       <title>/sys/devices/virtual/powercap accessible by default to containers</title>
       <link>https://github.com/advisories/GHSA-jq35-85cj-fj4p</link>
@@ -309,7 +309,7 @@
       <title>CRI-O vulnerable to /etc/passwd tampering resulting in Privilege Escalation</title>
       <link>https://github.com/advisories/GHSA-cm9x-c3rh-7rc4</link>
       <description>### Impact&#xA;It is possible to craft an environment variable with newlines to add entries to a container&#39;s /etc/passwd. It is possible to circumvent admission validation of username/UID by adding such an entry.&#xA;&#xA;Note: because the pod author is in control of the container&#39;s /etc/passwd, this is not considered a new risk factor. However, this advisory is being opened for transparency and as a way of tracking fixes.&#xA;&#xA;### Patches&#xA;1.26.0 will have the fix. More patches will be posted as they&#39;re available.&#xA;&#xA;### Workarounds&#xA;Additional security controls like SELinux should prevent any damage a container is able to do with root on the host. Using SELinux is recommended because this class of attack is already possible by manually editing the container&#39;s /etc/passwd &#xA;&#xA;### References&#xA;</description>
-      <pubDate>Wed, 27 Sep 2023 13:57:58 +0000</pubDate>
+      <pubDate>Thu, 09 Nov 2023 05:04:57 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O incorrect handling of supplementary groups may lead to sensitive information disclosure</title>
