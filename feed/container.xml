@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 10 Jan 2024 15:28:18 +0000</pubDate>
+    <pubDate>Fri, 19 Jan 2024 19:51:53 +0000</pubDate>
     <item>
       <title>/sys/devices/virtual/powercap accessible by default to containers</title>
       <link>https://github.com/advisories/GHSA-jq35-85cj-fj4p</link>
@@ -333,19 +333,19 @@
       <title>CRI-O&#39;s pods can break out of resource confinement on cgroupv2</title>
       <link>https://github.com/advisories/GHSA-p4rx-7wvg-fwrc</link>
       <description>### Impact&#xA;_What kind of vulnerability is it? Who is impacted?_&#xA;All versions of CRI-O running on cgroupv2 nodes. &#xA;Unchecked access to an experimental annotation allows a container to be unconfined. Back in 2021, [support was added](https://github.com/cri-o/cri-o/pull/4479) to support an experimental annotation that allows a user to request special resources in cgroupv2. It was supposed to be gated by an experimental annotation: `io.kubernetes.cri-o.UnifiedCgroup`, which was supposed to be filtered from the [list of allowed annotations](https://github.com/cri-o/cri-o/blob/main/pkg/config/workloads.go#L103-L107) . However, there is a bug in this code which allows any user to specify this annotation, regardless of whether it&#39;s enabled on the node. The consequences of this are a pod can specify any amount of memory/cpu and get it, circumventing the kubernetes scheduler, and potentially be able to DOS a node. &#xA;### Patches&#xA;_Has the problem been patched? What versions should users upgrade to?_&#xA;1.29.1, 1.28.3, 1.27.3&#xA;&#xA;### Workarounds&#xA;_Is there a way for users to fix or remediate the vulnerability without upgrading?_&#xA;use cgroupv1&#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_&#xA;</description>
-      <pubDate>Wed, 10 Jan 2024 15:27:46 +0000</pubDate>
+      <pubDate>Fri, 19 Jan 2024 19:46:28 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O&#39;s pods can break out of resource confinement on cgroupv2</title>
       <link>https://github.com/advisories/GHSA-p4rx-7wvg-fwrc</link>
       <description>### Impact&#xA;_What kind of vulnerability is it? Who is impacted?_&#xA;All versions of CRI-O running on cgroupv2 nodes. &#xA;Unchecked access to an experimental annotation allows a container to be unconfined. Back in 2021, [support was added](https://github.com/cri-o/cri-o/pull/4479) to support an experimental annotation that allows a user to request special resources in cgroupv2. It was supposed to be gated by an experimental annotation: `io.kubernetes.cri-o.UnifiedCgroup`, which was supposed to be filtered from the [list of allowed annotations](https://github.com/cri-o/cri-o/blob/main/pkg/config/workloads.go#L103-L107) . However, there is a bug in this code which allows any user to specify this annotation, regardless of whether it&#39;s enabled on the node. The consequences of this are a pod can specify any amount of memory/cpu and get it, circumventing the kubernetes scheduler, and potentially be able to DOS a node. &#xA;### Patches&#xA;_Has the problem been patched? What versions should users upgrade to?_&#xA;1.29.1, 1.28.3, 1.27.3&#xA;&#xA;### Workarounds&#xA;_Is there a way for users to fix or remediate the vulnerability without upgrading?_&#xA;use cgroupv1&#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_&#xA;</description>
-      <pubDate>Wed, 10 Jan 2024 15:27:46 +0000</pubDate>
+      <pubDate>Fri, 19 Jan 2024 19:46:28 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O&#39;s pods can break out of resource confinement on cgroupv2</title>
       <link>https://github.com/advisories/GHSA-p4rx-7wvg-fwrc</link>
       <description>### Impact&#xA;_What kind of vulnerability is it? Who is impacted?_&#xA;All versions of CRI-O running on cgroupv2 nodes. &#xA;Unchecked access to an experimental annotation allows a container to be unconfined. Back in 2021, [support was added](https://github.com/cri-o/cri-o/pull/4479) to support an experimental annotation that allows a user to request special resources in cgroupv2. It was supposed to be gated by an experimental annotation: `io.kubernetes.cri-o.UnifiedCgroup`, which was supposed to be filtered from the [list of allowed annotations](https://github.com/cri-o/cri-o/blob/main/pkg/config/workloads.go#L103-L107) . However, there is a bug in this code which allows any user to specify this annotation, regardless of whether it&#39;s enabled on the node. The consequences of this are a pod can specify any amount of memory/cpu and get it, circumventing the kubernetes scheduler, and potentially be able to DOS a node. &#xA;### Patches&#xA;_Has the problem been patched? What versions should users upgrade to?_&#xA;1.29.1, 1.28.3, 1.27.3&#xA;&#xA;### Workarounds&#xA;_Is there a way for users to fix or remediate the vulnerability without upgrading?_&#xA;use cgroupv1&#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_&#xA;</description>
-      <pubDate>Wed, 10 Jan 2024 15:27:46 +0000</pubDate>
+      <pubDate>Fri, 19 Jan 2024 19:46:28 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O vulnerable to /etc/passwd tampering resulting in Privilege Escalation</title>
