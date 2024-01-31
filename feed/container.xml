@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 31 Jan 2024 22:53:53 +0000</pubDate>
+    <pubDate>Wed, 31 Jan 2024 23:27:12 +0000</pubDate>
     <item>
       <title>/sys/devices/virtual/powercap accessible by default to containers</title>
       <link>https://github.com/advisories/GHSA-jq35-85cj-fj4p</link>
@@ -118,6 +118,18 @@
       <link>https://github.com/advisories/GHSA-997c-fj8j-rq5h</link>
       <description>Docker 1.3.2 allows remote attackers to execute arbitrary code with root privileges via a crafted (1) image or (2) build in a Dockerfile in an LZMA (.xz) archive, related to the chroot for archive extraction.</description>
       <pubDate>Mon, 09 Jan 2023 05:04:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>containerd environment variable leak</title>
+      <link>https://github.com/advisories/GHSA-6g2q-w5j3-fwh4</link>
+      <description>## Impact&#xA;&#xA;Containers launched through containerd&#39;s CRI implementation (through Kubernetes, crictl, or any other pod/container client that uses the containerd CRI service) that share the same image may receive incorrect environment variables, including values that are defined for other containers.  If the affected containers have different security contexts, this may allow sensitive information to be unintentionally shared.&#xA;&#xA;If you are not using containerd’s CRI implementation (through one of the mechanisms described above), you are not vulnerable to this issue.&#xA;&#xA;If you are not launching multiple containers or Kubernetes pods from the same image which have different environment variables, you are not vulnerable to this issue.&#xA;&#xA;If you are not launching multiple containers or Kubernetes pods from the same image in rapid succession, you have reduced likelihood of being vulnerable to this issue&#xA;&#xA;## Patches&#xA;&#xA;This vulnerability has been fixed in containerd 1.3.10 and containerd 1.4.4.  Users should update to these versions as soon as they are released.&#xA;&#xA;## Workarounds&#xA;&#xA;There are no known workarounds.&#xA;&#xA;## For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at security@containerd.io if you think you’ve found a security bug.</description>
+      <pubDate>Wed, 31 Jan 2024 23:22:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>containerd environment variable leak</title>
+      <link>https://github.com/advisories/GHSA-6g2q-w5j3-fwh4</link>
+      <description>## Impact&#xA;&#xA;Containers launched through containerd&#39;s CRI implementation (through Kubernetes, crictl, or any other pod/container client that uses the containerd CRI service) that share the same image may receive incorrect environment variables, including values that are defined for other containers.  If the affected containers have different security contexts, this may allow sensitive information to be unintentionally shared.&#xA;&#xA;If you are not using containerd’s CRI implementation (through one of the mechanisms described above), you are not vulnerable to this issue.&#xA;&#xA;If you are not launching multiple containers or Kubernetes pods from the same image which have different environment variables, you are not vulnerable to this issue.&#xA;&#xA;If you are not launching multiple containers or Kubernetes pods from the same image in rapid succession, you have reduced likelihood of being vulnerable to this issue&#xA;&#xA;## Patches&#xA;&#xA;This vulnerability has been fixed in containerd 1.3.10 and containerd 1.4.4.  Users should update to these versions as soon as they are released.&#xA;&#xA;## Workarounds&#xA;&#xA;There are no known workarounds.&#xA;&#xA;## For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at security@containerd.io if you think you’ve found a security bug.</description>
+      <pubDate>Wed, 31 Jan 2024 23:22:47 +0000</pubDate>
     </item>
     <item>
       <title>containerd allows RAPL to be accessible to a container</title>
