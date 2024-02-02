@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 01 Feb 2024 17:56:04 +0000</pubDate>
+    <pubDate>Fri, 02 Feb 2024 16:12:50 +0000</pubDate>
     <item>
       <title>/sys/devices/virtual/powercap accessible by default to containers</title>
       <link>https://github.com/advisories/GHSA-jq35-85cj-fj4p</link>
@@ -105,7 +105,7 @@
       <title>Arbitrary File Write in Libcontainer</title>
       <link>https://github.com/advisories/GHSA-g44j-7vp3-68cv</link>
       <description>Libcontainer 1.6.0, as used in Docker Engine, allows local users to escape containerization (&#34;mount namespace breakout&#34;) and write to arbitrary file on the host system via a symlink attack in an image when respawning a container.</description>
-      <pubDate>Mon, 09 Jan 2023 05:04:56 +0000</pubDate>
+      <pubDate>Fri, 02 Feb 2024 15:59:34 +0000</pubDate>
     </item>
     <item>
       <title>Man-in-the-Middle (MitM)</title>
