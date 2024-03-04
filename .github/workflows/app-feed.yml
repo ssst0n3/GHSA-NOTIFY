@@ -15,7 +15,7 @@ jobs:
         env:
           GHTOKEN: ${{ secrets.github_token }}
           feed: "feed/app.xml"
-          packages: '["minio"]'
+          packages: '["github.com/minio/minio"]'
       - name: Commit
         shell: /usr/bin/bash {0}
         run: |
