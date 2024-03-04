@@ -1,4 +1,4 @@
-name: Container Security Feed
+name: Application Security Feed
 on:
   workflow_dispatch:
   schedule:
