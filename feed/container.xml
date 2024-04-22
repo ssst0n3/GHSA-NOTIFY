@@ -4,7 +4,13 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Mon, 22 Apr 2024 18:55:14 +0000</pubDate>
+    <pubDate>Mon, 22 Apr 2024 19:14:41 +0000</pubDate>
+    <item>
+      <title>Path Traversal in Moby builder</title>
+      <link>https://github.com/advisories/GHSA-6hwg-w5jg-9c6x</link>
+      <description>util/binfmt_misc/check.go in Builder in Docker Engine before 19.03.9 calls os.OpenFile with a potentially unsafe qemu-check temporary pathname, constructed with an empty first argument in an ioutil.TempDir call.</description>
+      <pubDate>Mon, 22 Apr 2024 19:08:27 +0000</pubDate>
+    </item>
     <item>
       <title>Moby (Docker Engine) started with non-empty inheritable Linux process capabilities</title>
       <link>https://github.com/advisories/GHSA-2mm7-x5h6-5pvq</link>
