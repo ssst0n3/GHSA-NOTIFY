@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 26 Apr 2024 22:52:54 +0000</pubDate>
+    <pubDate>Tue, 30 Apr 2024 09:48:03 +0000</pubDate>
     <item>
       <title>Path Traversal in Moby builder</title>
       <link>https://github.com/advisories/GHSA-6hwg-w5jg-9c6x</link>
@@ -318,10 +318,10 @@
       <pubDate>Wed, 01 Feb 2023 05:05:45 +0000</pubDate>
     </item>
     <item>
-      <title>Runc allows an arbitrary systemd property to be injected</title>
+      <title>Withdrawn: Runc allows an arbitrary systemd property to be injected</title>
       <link>https://github.com/advisories/GHSA-c5pj-mqfh-rvc3</link>
-      <description>A flaw was found in cri-o, where an arbitrary systemd property can be injected via a Pod annotation. Any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system. This issue has its root in how runc handles Config Annotations lists.</description>
-      <pubDate>Fri, 26 Apr 2024 22:46:06 +0000</pubDate>
+      <description>## Withdrawn Advisory&#xA;&#xA;This advisory has been withdrawn because it was incorrectly attributed to runc. Please see the issue [here](https://github.com/opencontainers/runc/issues/4263) for more information.&#xA;&#xA;## Original Description&#xA;&#xA;A flaw was found in cri-o, where an arbitrary systemd property can be injected via a Pod annotation. Any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system. This issue has its root in how runc handles Config Annotations lists.</description>
+      <pubDate>Tue, 30 Apr 2024 09:37:24 +0000</pubDate>
     </item>
     <item>
       <title>runc vulnerable to container breakout through process.cwd trickery and leaked fds</title>
@@ -400,6 +400,24 @@
       <link>https://github.com/advisories/GHSA-8v99-48m9-c8pm</link>
       <description>Imgcrypt implements a function `CheckAuthorization()` that is supposed to check whether a user is authorized to access an encrypted image given the keys that the user has provided on the command line that would enable decryption of the image. The check is to prevent that a user can start a container from an image that has previously been decrypted by another user on the same system and therefore a decrypted version of the image layers may be already available in the cache locally.&#xA;&#xA;The failure occurs when an image with a ManifestList is used and the architecture of the local host is not the first one in the ManifestList. In the version prior to the fix, only the first architecture in the list was tested, which may not have its layers available locally (were not pulled) since it cannot be run on the host architecture. Therefore, the verdict on unavailable layers was that the image could be run anticipating that image run failure would occur later due to the layers not being available. However, this verdict to allow the image to run lead to other architectures in the ManifestList be able to run an image without providing keys if that image had previously been decrypted. The fixed version now skips over irrelevant architectures and tests the Manifest of the local architecture, if available.&#xA;&#xA;Known projects that use the `CheckAuthorization()` of imgcrypt is for example the ctr-enc client tool provided by imgcrypt. In this implementation, the call to `CheckAuthorization()` is used on the client side and could therefore also be easily circumvented by a modified client tool not calling this function.&#xA;&#xA;In relation to the vulnerability in ctr-enc, affected environments would have to allow different users to invoke ctr-enc indirectly using some sort of management stack that gives user indirect access to ctr-enc.&#xA;&#xA;The patch has been applied to imgcrypt v1.1.4. Workarounds may include usage of different namespaces for each remote user.</description>
       <pubDate>Tue, 14 Feb 2023 17:47:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>CRI-O vulnerable to an arbitrary systemd property injection</title>
+      <link>https://github.com/advisories/GHSA-2cgq-h8xw-2v5j</link>
+      <description>### Impact&#xA;On CRI-O, an arbitrary systemd property can be injected via a Pod annotation:&#xA;```&#xA;---&#xA;apiVersion: v1&#xA;kind: Pod&#xA;metadata:&#xA;  name: poc-arbitrary-systemd-property-injection&#xA;  annotations:&#xA;    # I believe that ExecStart with an arbitrary command works here too,&#xA;    # but I haven&#39;t figured out how to marshalize the ExecStart struct to gvariant string.&#xA;    org.systemd.property.SuccessAction: &#34;&#39;poweroff-force&#39;&#34;&#xA;spec:&#xA;  containers:&#xA;    - name: hello&#xA;      image: [quay.io/podman/hello](http://quay.io/podman/hello)&#xA;```&#xA;&#xA;This means that any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system.&#xA;&#xA;Tested with CRI-O v1.24 on minikube.&#xA;&#xA;Thanks to Cédric Clerget (GitHub ID @cclerget) for finding out that CRI-O just passes pod annotations to OCI annotations:&#xA;https://github.com/opencontainers/runc/pull/3923#discussion_r1532292536&#xA;&#xA;CRI-O has to filter out annotations that have the prefix &#34;org.systend.property.&#34;&#xA;&#xA;See also:&#xA;- https://github.com/opencontainers/runtime-spec/blob/main/features.md#unsafe-annotations-in-configjson&#xA;- https://github.com/opencontainers/runc/pull/4217&#xA;&#xA;&#xA;### Workarounds&#xA;Unfortunately, the only workarounds would involve an external mutating webhook to disallow these annotations</description>
+      <pubDate>Tue, 30 Apr 2024 09:39:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>CRI-O vulnerable to an arbitrary systemd property injection</title>
+      <link>https://github.com/advisories/GHSA-2cgq-h8xw-2v5j</link>
+      <description>### Impact&#xA;On CRI-O, an arbitrary systemd property can be injected via a Pod annotation:&#xA;```&#xA;---&#xA;apiVersion: v1&#xA;kind: Pod&#xA;metadata:&#xA;  name: poc-arbitrary-systemd-property-injection&#xA;  annotations:&#xA;    # I believe that ExecStart with an arbitrary command works here too,&#xA;    # but I haven&#39;t figured out how to marshalize the ExecStart struct to gvariant string.&#xA;    org.systemd.property.SuccessAction: &#34;&#39;poweroff-force&#39;&#34;&#xA;spec:&#xA;  containers:&#xA;    - name: hello&#xA;      image: [quay.io/podman/hello](http://quay.io/podman/hello)&#xA;```&#xA;&#xA;This means that any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system.&#xA;&#xA;Tested with CRI-O v1.24 on minikube.&#xA;&#xA;Thanks to Cédric Clerget (GitHub ID @cclerget) for finding out that CRI-O just passes pod annotations to OCI annotations:&#xA;https://github.com/opencontainers/runc/pull/3923#discussion_r1532292536&#xA;&#xA;CRI-O has to filter out annotations that have the prefix &#34;org.systend.property.&#34;&#xA;&#xA;See also:&#xA;- https://github.com/opencontainers/runtime-spec/blob/main/features.md#unsafe-annotations-in-configjson&#xA;- https://github.com/opencontainers/runc/pull/4217&#xA;&#xA;&#xA;### Workarounds&#xA;Unfortunately, the only workarounds would involve an external mutating webhook to disallow these annotations</description>
+      <pubDate>Tue, 30 Apr 2024 09:39:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>CRI-O vulnerable to an arbitrary systemd property injection</title>
+      <link>https://github.com/advisories/GHSA-2cgq-h8xw-2v5j</link>
+      <description>### Impact&#xA;On CRI-O, an arbitrary systemd property can be injected via a Pod annotation:&#xA;```&#xA;---&#xA;apiVersion: v1&#xA;kind: Pod&#xA;metadata:&#xA;  name: poc-arbitrary-systemd-property-injection&#xA;  annotations:&#xA;    # I believe that ExecStart with an arbitrary command works here too,&#xA;    # but I haven&#39;t figured out how to marshalize the ExecStart struct to gvariant string.&#xA;    org.systemd.property.SuccessAction: &#34;&#39;poweroff-force&#39;&#34;&#xA;spec:&#xA;  containers:&#xA;    - name: hello&#xA;      image: [quay.io/podman/hello](http://quay.io/podman/hello)&#xA;```&#xA;&#xA;This means that any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system.&#xA;&#xA;Tested with CRI-O v1.24 on minikube.&#xA;&#xA;Thanks to Cédric Clerget (GitHub ID @cclerget) for finding out that CRI-O just passes pod annotations to OCI annotations:&#xA;https://github.com/opencontainers/runc/pull/3923#discussion_r1532292536&#xA;&#xA;CRI-O has to filter out annotations that have the prefix &#34;org.systend.property.&#34;&#xA;&#xA;See also:&#xA;- https://github.com/opencontainers/runtime-spec/blob/main/features.md#unsafe-annotations-in-configjson&#xA;- https://github.com/opencontainers/runc/pull/4217&#xA;&#xA;&#xA;### Workarounds&#xA;Unfortunately, the only workarounds would involve an external mutating webhook to disallow these annotations</description>
+      <pubDate>Tue, 30 Apr 2024 09:39:40 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O&#39;s pods can break out of resource confinement on cgroupv2</title>
