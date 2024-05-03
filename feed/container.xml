@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 01 May 2024 13:21:47 +0000</pubDate>
+    <pubDate>Fri, 03 May 2024 20:38:39 +0000</pubDate>
     <item>
       <title>Path Traversal in Moby builder</title>
       <link>https://github.com/advisories/GHSA-6hwg-w5jg-9c6x</link>
@@ -441,7 +441,7 @@
       <title>CRI-O vulnerable to /etc/passwd tampering resulting in Privilege Escalation</title>
       <link>https://github.com/advisories/GHSA-cm9x-c3rh-7rc4</link>
       <description>### Impact&#xA;It is possible to craft an environment variable with newlines to add entries to a container&#39;s /etc/passwd. It is possible to circumvent admission validation of username/UID by adding such an entry.&#xA;&#xA;Note: because the pod author is in control of the container&#39;s /etc/passwd, this is not considered a new risk factor. However, this advisory is being opened for transparency and as a way of tracking fixes.&#xA;&#xA;### Patches&#xA;1.26.0 will have the fix. More patches will be posted as they&#39;re available.&#xA;&#xA;### Workarounds&#xA;Additional security controls like SELinux should prevent any damage a container is able to do with root on the host. Using SELinux is recommended because this class of attack is already possible by manually editing the container&#39;s /etc/passwd &#xA;&#xA;### References&#xA;</description>
-      <pubDate>Thu, 09 Nov 2023 05:04:57 +0000</pubDate>
+      <pubDate>Fri, 03 May 2024 20:28:17 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O incorrect handling of supplementary groups may lead to sensitive information disclosure</title>
