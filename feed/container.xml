@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 03 May 2024 20:38:39 +0000</pubDate>
+    <pubDate>Sun, 05 May 2024 05:16:25 +0000</pubDate>
     <item>
       <title>Path Traversal in Moby builder</title>
       <link>https://github.com/advisories/GHSA-6hwg-w5jg-9c6x</link>
@@ -538,6 +538,12 @@
       <link>https://github.com/advisories/GHSA-jqmc-79gx-7g8p</link>
       <description>An incorrect sysctls validation vulnerability was found in CRI-O 1.18 and earlier. The sysctls from the list of &#34;safe&#34; sysctls specified for the cluster will be applied to the host if an attacker is able to create a pod with a hostIPC and hostNetwork kernel namespace.</description>
       <pubDate>Fri, 03 Feb 2023 05:05:59 +0000</pubDate>
+    </item>
+    <item>
+      <title> CoreDNS may return invalid cache entries</title>
+      <link>https://github.com/advisories/GHSA-m9w6-wp3h-vq8g</link>
+      <description>A flaw was found in coredns. This issue could lead to invalid cache entries returning due to incorrectly implemented caching.</description>
+      <pubDate>Sun, 05 May 2024 05:02:30 +0000</pubDate>
     </item>
     <item>
       <title>coreDNS vulnerable to Improper Restriction of Communication Channel to Intended Endpoints</title>
