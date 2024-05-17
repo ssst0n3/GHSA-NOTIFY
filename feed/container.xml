@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Tue, 14 May 2024 22:18:51 +0000</pubDate>
+    <pubDate>Fri, 17 May 2024 01:23:39 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) Insufficiently restricted permissions on data directory</title>
       <link>https://github.com/advisories/GHSA-3fwx-pjgw-3558</link>
@@ -339,7 +339,7 @@
       <title>Withdrawn: Runc allows an arbitrary systemd property to be injected</title>
       <link>https://github.com/advisories/GHSA-c5pj-mqfh-rvc3</link>
       <description>## Withdrawn Advisory&#xA;&#xA;This advisory has been withdrawn because it was incorrectly attributed to runc. Please see the issue [here](https://github.com/opencontainers/runc/issues/4263) for more information.&#xA;&#xA;## Original Description&#xA;&#xA;A flaw was found in cri-o, where an arbitrary systemd property can be injected via a Pod annotation. Any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system. This issue has its root in how runc handles Config Annotations lists.</description>
-      <pubDate>Fri, 10 May 2024 00:30:43 +0000</pubDate>
+      <pubDate>Fri, 17 May 2024 00:31:00 +0000</pubDate>
     </item>
     <item>
       <title>runc vulnerable to container breakout through process.cwd trickery and leaked fds</title>
