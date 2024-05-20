@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 17 May 2024 01:23:39 +0000</pubDate>
+    <pubDate>Mon, 20 May 2024 19:54:16 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) Insufficiently restricted permissions on data directory</title>
       <link>https://github.com/advisories/GHSA-3fwx-pjgw-3558</link>
@@ -336,6 +336,12 @@
       <pubDate>Wed, 01 Feb 2023 05:05:45 +0000</pubDate>
     </item>
     <item>
+      <title>Incorrect Authorization in runc</title>
+      <link>https://github.com/advisories/GHSA-fgv8-vj5c-2ppq</link>
+      <description>runc through 1.0.0-rc8, as used in Docker through 19.03.2-ce and other products, allows AppArmor restriction bypass because libcontainer/rootfs_linux.go incorrectly checks mount targets, and thus a malicious Docker image can mount over a /proc directory.</description>
+      <pubDate>Mon, 20 May 2024 19:45:18 +0000</pubDate>
+    </item>
+    <item>
       <title>Withdrawn: Runc allows an arbitrary systemd property to be injected</title>
       <link>https://github.com/advisories/GHSA-c5pj-mqfh-rvc3</link>
       <description>## Withdrawn Advisory&#xA;&#xA;This advisory has been withdrawn because it was incorrectly attributed to runc. Please see the issue [here](https://github.com/opencontainers/runc/issues/4263) for more information.&#xA;&#xA;## Original Description&#xA;&#xA;A flaw was found in cri-o, where an arbitrary systemd property can be injected via a Pod annotation. Any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system. This issue has its root in how runc handles Config Annotations lists.</description>
@@ -382,12 +388,6 @@
       <link>https://github.com/advisories/GHSA-vpvm-3wq2-2wvm</link>
       <description>runc 1.0.0-rc95 through 1.1.4 has Incorrect Access Control leading to Escalation of Privileges, related to `libcontainer/rootfs_linux.go`. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. NOTE: this issue exists because of a CVE-2019-19921 regression.</description>
       <pubDate>Wed, 16 Aug 2023 13:15:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Incorrect Authorization in runc</title>
-      <link>https://github.com/advisories/GHSA-fgv8-vj5c-2ppq</link>
-      <description>runc through 1.0.0-rc8, as used in Docker through 19.03.2-ce and other products, allows AppArmor restriction bypass because libcontainer/rootfs_linux.go incorrectly checks mount targets, and thus a malicious Docker image can mount over a /proc directory.</description>
-      <pubDate>Fri, 24 Feb 2023 17:01:50 +0000</pubDate>
     </item>
     <item>
       <title>Default inheritable capabilities for linux container should be empty</title>
