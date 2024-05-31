@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Mon, 20 May 2024 20:53:54 +0000</pubDate>
+    <pubDate>Fri, 31 May 2024 17:15:20 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) Insufficiently restricted permissions on data directory</title>
       <link>https://github.com/advisories/GHSA-3fwx-pjgw-3558</link>
@@ -369,7 +369,7 @@
       <title>opencontainers runc contains procfs race condition with a shared volume mount</title>
       <link>https://github.com/advisories/GHSA-fh74-hm69-rqjw</link>
       <description>### Impact&#xA;By crafting a malicious root filesystem (with `/proc` being a symlink to a directory which was inside a volume shared with another running container), an attacker in control of both containers can trick `runc` into not correctly configuring the container&#39;s security labels and not correctly masking paths inside `/proc` which contain potentially-sensitive information about the host (or even allow for direct attacks against the host).&#xA;&#xA;In order to exploit this bug, an untrusted user must be able to spawn custom containers with custom mount configurations (such that a volume is shared between two containers). It should be noted that we consider this to be a fairly high level of access for an untrusted user -- and we do not recommend allowing completely untrusted users to have such degrees of access without further restrictions.&#xA;&#xA;### Specific Go Package Affected&#xA;github.com/opencontainers/runc/libcontainer&#xA;&#xA;### Patches&#xA;This vulnerability has been fixed in `1.0.0-rc10`. It should be noted that the current fix is effectively a hot-fix, and there are known ways for it to be worked around (such as making the entire root filesystem a shared volume controlled by another container). We recommend that users review their access policies to ensure that untrusted users do not have such high levels of controls over container mount configuration.&#xA;&#xA;### Workarounds&#xA;If you are not providing the ability for untrusted users to configure mountpoints for `runc` (or through a higher-level tool such as `docker run -v`) then you are not vulnerable to this issue. This exploit requires fairly complicated levels of access (which are available for some public clouds but are not necessarily available for all deployments).&#xA;&#xA;Additionally, it appears as though it is not possible to exploit this vulnerability through Docker (due to the order of mounts Docker generates). However you should not depend on this, as it may be possible to work around this roadblock.&#xA;&#xA;### Credits&#xA;This vulnerability was discovered by Cure53, as part of a third-party security audit.&#xA;&#xA;### For more information&#xA;If you have any questions or comments about this advisory:&#xA;* [Open an issue](https://github.com/opencontainers/runc/issues/new).&#xA;* Email us at [dev@opencontainers.org](mailto:dev@opencontainers.org), or [security@opencontainers.org](mailto:security@opencontainers.org) if you think you&#39;ve found a security bug.</description>
-      <pubDate>Wed, 25 Oct 2023 14:24:52 +0000</pubDate>
+      <pubDate>Fri, 31 May 2024 17:08:05 +0000</pubDate>
     </item>
     <item>
       <title>runc AppArmor bypass with symlinked /proc</title>
