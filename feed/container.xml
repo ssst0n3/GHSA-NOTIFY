@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 03 Jul 2024 20:27:42 +0000</pubDate>
+    <pubDate>Wed, 03 Jul 2024 20:39:55 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) is vulnerable to Ambiguous OCI manifest parsing</title>
       <link>https://github.com/advisories/GHSA-xmmx-7jpf-fx42</link>
@@ -399,7 +399,7 @@
       <title>Opencontainers runc Incorrect Authorization vulnerability</title>
       <link>https://github.com/advisories/GHSA-vpvm-3wq2-2wvm</link>
       <description>runc 1.0.0-rc95 through 1.1.4 has Incorrect Access Control leading to Escalation of Privileges, related to `libcontainer/rootfs_linux.go`. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. NOTE: this issue exists because of a CVE-2019-19921 regression.</description>
-      <pubDate>Wed, 16 Aug 2023 13:15:43 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 20:30:50 +0000</pubDate>
     </item>
     <item>
       <title>Default inheritable capabilities for linux container should be empty</title>
