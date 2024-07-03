@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 27 Jun 2024 18:37:39 +0000</pubDate>
+    <pubDate>Wed, 03 Jul 2024 20:27:42 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) is vulnerable to Ambiguous OCI manifest parsing</title>
       <link>https://github.com/advisories/GHSA-xmmx-7jpf-fx42</link>
@@ -15,7 +15,7 @@
       <title>`docker cp` allows unexpected chmod of host files in Moby Docker Engine</title>
       <link>https://github.com/advisories/GHSA-v994-f8vw-g7j4</link>
       <description>## Impact&#xA;A bug was found in Moby (Docker Engine) where attempting to copy files using `docker cp` into a specially-crafted container can result in Unix file permission changes for existing files in the host’s filesystem, widening access to others. This bug does not directly allow files to be read, modified, or executed without an additional cooperating process.&#xA;&#xA;## Patches&#xA;This bug has been fixed in Moby (Docker Engine) 20.10.9. Users should update to this version as soon as possible. Running containers do not need to be restarted.&#xA;&#xA;## Workarounds&#xA;Ensure you only run trusted containers.&#xA;&#xA;## Credits&#xA;The Moby project would like to thank Lei Wang and Ruizhi Xiao for responsibly disclosing this issue in accordance with the ﻿[Moby security policy](https://github.com/moby/moby/blob/master/SECURITY.md).&#xA;&#xA;## For more information&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/moby/moby/issues/new)&#xA;* Email us at ﻿ security@docker.com ﻿ if you think you’ve found a security bug</description>
-      <pubDate>Mon, 10 Jun 2024 18:38:44 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 20:27:21 +0000</pubDate>
     </item>
     <item>
       <title>Moby (Docker Engine) Insufficiently restricted permissions on data directory</title>
