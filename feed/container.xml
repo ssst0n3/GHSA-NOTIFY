@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 03 Jul 2024 20:39:55 +0000</pubDate>
+    <pubDate>Fri, 05 Jul 2024 19:09:25 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) is vulnerable to Ambiguous OCI manifest parsing</title>
       <link>https://github.com/advisories/GHSA-xmmx-7jpf-fx42</link>
@@ -63,13 +63,13 @@
       <title>Classic builder cache poisoning</title>
       <link>https://github.com/advisories/GHSA-xw73-rw38-6vjc</link>
       <description>The classic builder cache system is prone to cache poisoning if the image is built `FROM scratch`.&#xA;Also, changes to some instructions (most important being `HEALTHCHECK` and `ONBUILD`) would not cause a cache miss.&#xA;&#xA;&#xA;An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps.&#xA;&#xA;For example, an attacker could create an image that is considered as a valid cache candidate for:&#xA;```&#xA;FROM scratch&#xA;MAINTAINER Pawel&#xA;```&#xA;&#xA;when in fact the malicious image used as a cache would be an image built from a different Dockerfile.&#xA;&#xA;In the second case, the attacker could for example substitute a different `HEALTCHECK` command.&#xA;&#xA;&#xA;### Impact&#xA;&#xA;23.0+ users are only affected if they explicitly opted out of Buildkit (`DOCKER_BUILDKIT=0` environment variable) or are using the `/build` API endpoint (which uses the classic builder by default).&#xA;&#xA;All users on versions older than 23.0 could be impacted. An example could be a CI with a shared cache, or just a regular Docker user pulling a malicious image due to misspelling/typosquatting.&#xA;&#xA;Image build API endpoint (`/build`) and `ImageBuild` function from `github.com/docker/docker/client` is also affected as it the uses classic builder by default. &#xA;&#xA;&#xA;### Patches&#xA;&#xA;Patches are included in Moby releases:&#xA;&#xA;- v25.0.2&#xA;- v24.0.9&#xA;- v23.0.10&#xA;&#xA;### Workarounds&#xA;&#xA;- Use `--no-cache` or use Buildkit if possible (`DOCKER_BUILDKIT=1`, it&#39;s default on 23.0+ assuming that the buildx plugin is installed).&#xA;- Use `Version = types.BuilderBuildKit` or `NoCache = true` in `ImageBuildOptions` for `ImageBuild` call.&#xA;&#xA;</description>
-      <pubDate>Fri, 31 May 2024 20:43:42 +0000</pubDate>
+      <pubDate>Fri, 05 Jul 2024 18:59:06 +0000</pubDate>
     </item>
     <item>
       <title>Classic builder cache poisoning</title>
       <link>https://github.com/advisories/GHSA-xw73-rw38-6vjc</link>
       <description>The classic builder cache system is prone to cache poisoning if the image is built `FROM scratch`.&#xA;Also, changes to some instructions (most important being `HEALTHCHECK` and `ONBUILD`) would not cause a cache miss.&#xA;&#xA;&#xA;An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps.&#xA;&#xA;For example, an attacker could create an image that is considered as a valid cache candidate for:&#xA;```&#xA;FROM scratch&#xA;MAINTAINER Pawel&#xA;```&#xA;&#xA;when in fact the malicious image used as a cache would be an image built from a different Dockerfile.&#xA;&#xA;In the second case, the attacker could for example substitute a different `HEALTCHECK` command.&#xA;&#xA;&#xA;### Impact&#xA;&#xA;23.0+ users are only affected if they explicitly opted out of Buildkit (`DOCKER_BUILDKIT=0` environment variable) or are using the `/build` API endpoint (which uses the classic builder by default).&#xA;&#xA;All users on versions older than 23.0 could be impacted. An example could be a CI with a shared cache, or just a regular Docker user pulling a malicious image due to misspelling/typosquatting.&#xA;&#xA;Image build API endpoint (`/build`) and `ImageBuild` function from `github.com/docker/docker/client` is also affected as it the uses classic builder by default. &#xA;&#xA;&#xA;### Patches&#xA;&#xA;Patches are included in Moby releases:&#xA;&#xA;- v25.0.2&#xA;- v24.0.9&#xA;- v23.0.10&#xA;&#xA;### Workarounds&#xA;&#xA;- Use `--no-cache` or use Buildkit if possible (`DOCKER_BUILDKIT=1`, it&#39;s default on 23.0+ assuming that the buildx plugin is installed).&#xA;- Use `Version = types.BuilderBuildKit` or `NoCache = true` in `ImageBuildOptions` for `ImageBuild` call.&#xA;&#xA;</description>
-      <pubDate>Fri, 31 May 2024 20:43:42 +0000</pubDate>
+      <pubDate>Fri, 05 Jul 2024 18:59:06 +0000</pubDate>
     </item>
     <item>
       <title>/sys/devices/virtual/powercap accessible by default to containers</title>
