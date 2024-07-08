@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 05 Jul 2024 20:59:40 +0000</pubDate>
+    <pubDate>Mon, 08 Jul 2024 13:01:14 +0000</pubDate>
     <item>
       <title>Moby (Docker Engine) is vulnerable to Ambiguous OCI manifest parsing</title>
       <link>https://github.com/advisories/GHSA-xmmx-7jpf-fx42</link>
@@ -189,13 +189,13 @@
       <title>containerd started with non-empty inheritable Linux process capabilities</title>
       <link>https://github.com/advisories/GHSA-c9cp-9c75-9v8c</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd where containers were incorrectly started with non-empty inheritable Linux process capabilities, creating an atypical Linux environment and enabling programs with inheritable file capabilities to elevate those capabilities to the permitted set during `execve(2)`.  Normally, when executable programs have specified permitted file capabilities, otherwise unprivileged users and processes can execute those programs and gain the specified file capabilities up to the bounding set.  Due to this bug, containers which included executable programs with inheritable file capabilities allowed otherwise unprivileged users and processes to additionally gain these inheritable file capabilities up to the container&#39;s bounding set.  Containers which use Linux users and groups to perform privilege separation inside the container are most directly impacted.&#xA;&#xA;This bug did not affect the container security sandbox as the inheritable set never contained more capabilities than were included in the container&#39;s bounding set.&#xA;&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.5.11 and 1.6.2.  Users should update to these versions as soon as possible.  Running containers should be stopped, deleted, and recreated for the inheritable capabilities to be reset.&#xA;&#xA;This fix changes containerd behavior such that containers are started with a more typical Linux environment.  Refer to `capabilities(7)` for a description of how capabilities work.  Note that permitted file capabilities continue to allow for privileges to be raised up to the container&#39;s bounding set and that processes may add capabilities to their own inheritable set up to the container&#39;s bounding set per the rules described in the manual page.  In all cases the container&#39;s bounding set provides an upper bound on the capabilities that can be assumed and provides for the container security sandbox.&#xA;&#xA;### Workarounds&#xA;&#xA;The entrypoint of a container can be modified to use a utility like `capsh(1)` to drop inheritable capabilities prior to the primary process starting.&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io) if you think you’ve found a security bug</description>
-      <pubDate>Tue, 14 May 2024 22:04:58 +0000</pubDate>
+      <pubDate>Mon, 08 Jul 2024 12:58:30 +0000</pubDate>
     </item>
     <item>
       <title>containerd started with non-empty inheritable Linux process capabilities</title>
       <link>https://github.com/advisories/GHSA-c9cp-9c75-9v8c</link>
       <description>### Impact&#xA;&#xA;A bug was found in containerd where containers were incorrectly started with non-empty inheritable Linux process capabilities, creating an atypical Linux environment and enabling programs with inheritable file capabilities to elevate those capabilities to the permitted set during `execve(2)`.  Normally, when executable programs have specified permitted file capabilities, otherwise unprivileged users and processes can execute those programs and gain the specified file capabilities up to the bounding set.  Due to this bug, containers which included executable programs with inheritable file capabilities allowed otherwise unprivileged users and processes to additionally gain these inheritable file capabilities up to the container&#39;s bounding set.  Containers which use Linux users and groups to perform privilege separation inside the container are most directly impacted.&#xA;&#xA;This bug did not affect the container security sandbox as the inheritable set never contained more capabilities than were included in the container&#39;s bounding set.&#xA;&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in containerd 1.5.11 and 1.6.2.  Users should update to these versions as soon as possible.  Running containers should be stopped, deleted, and recreated for the inheritable capabilities to be reset.&#xA;&#xA;This fix changes containerd behavior such that containers are started with a more typical Linux environment.  Refer to `capabilities(7)` for a description of how capabilities work.  Note that permitted file capabilities continue to allow for privileges to be raised up to the container&#39;s bounding set and that processes may add capabilities to their own inheritable set up to the container&#39;s bounding set per the rules described in the manual page.  In all cases the container&#39;s bounding set provides an upper bound on the capabilities that can be assumed and provides for the container security sandbox.&#xA;&#xA;### Workarounds&#xA;&#xA;The entrypoint of a container can be modified to use a utility like `capsh(1)` to drop inheritable capabilities prior to the primary process starting.&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/containerd/containerd/issues/new)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io) if you think you’ve found a security bug</description>
-      <pubDate>Tue, 14 May 2024 22:04:58 +0000</pubDate>
+      <pubDate>Mon, 08 Jul 2024 12:58:30 +0000</pubDate>
     </item>
     <item>
       <title>containerd environment variable leak</title>
@@ -610,6 +610,18 @@
       <link>https://github.com/advisories/GHSA-gv9j-4w24-q7vx</link>
       <description>### Impact&#xA;&#xA;CoreDNS before 1.6.6 (using go DNS package &lt; 1.1.25) improperly generates random numbers because math/rand is used. The TXID becomes predictable, leading to response forgeries.&#xA;&#xA;### Patches&#xA;The problem has been fixed in 1.6.6+.&#xA;&#xA;### References&#xA;- [CVE-2019-19794](https://nvd.nist.gov/vuln/detail/CVE-2019-19794)&#xA;&#xA;### For more information&#xA;Please consult [our security guide](https://github.com/coredns/coredns/blob/master/.github/SECURITY.md) for more information regarding our security process.&#xA;</description>
       <pubDate>Wed, 11 Jan 2023 05:05:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Podman Path Traversal Vulnerability leads to arbitrary file read/write</title>
+      <link>https://github.com/advisories/GHSA-rh5f-2w6r-q7vj</link>
+      <description>A path traversal vulnerability has been discovered in podman before version 1.4.0 in the way it handles symlinks inside containers. An attacker who has compromised an existing container can cause arbitrary files on the host filesystem to be read/written when an administrator tries to copy a file from/to the container.</description>
+      <pubDate>Fri, 25 Aug 2023 21:29:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Podman has Files or Directories Accessible to External Parties</title>
+      <link>https://github.com/advisories/GHSA-vmhj-p9hw-vgrf</link>
+      <description>A flaw was discovered in Podman where it incorrectly allows containers when created to overwrite existing files in volumes, even if they are mounted as read-only. When a user runs a malicious container or a container based on a malicious image with an attached volume that is used for the first time, it is possible to trigger the flaw and overwrite files in the volume. This issue was introduced in version 1.6.0.</description>
+      <pubDate>Mon, 01 May 2023 22:27:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
