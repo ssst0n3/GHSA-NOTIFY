@@ -3,7 +3,7 @@
     <title>Container Software GHSA Feeds</title>
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
-    <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
+    <managingEditor>ssst0n3@gmail.com (ssst0n3),github.com/cafan</managingEditor>
     <pubDate>Tue, 30 Jul 2024 10:34:54 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
@@ -664,6 +664,18 @@
       <link>https://github.com/advisories/GHSA-gv9j-4w24-q7vx</link>
       <description>### Impact&#xA;&#xA;CoreDNS before 1.6.6 (using go DNS package &lt; 1.1.25) improperly generates random numbers because math/rand is used. The TXID becomes predictable, leading to response forgeries.&#xA;&#xA;### Patches&#xA;The problem has been fixed in 1.6.6+.&#xA;&#xA;### References&#xA;- [CVE-2019-19794](https://nvd.nist.gov/vuln/detail/CVE-2019-19794)&#xA;&#xA;### For more information&#xA;Please consult [our security guide](https://github.com/coredns/coredns/blob/master/.github/SECURITY.md) for more information regarding our security process.&#xA;</description>
       <pubDate>Wed, 11 Jan 2023 05:05:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Podman Path Traversal Vulnerability leads to arbitrary file read/write</title>
+      <link>https://github.com/advisories/GHSA-rh5f-2w6r-q7vj</link>
+      <description>A path traversal vulnerability has been discovered in podman before version 1.4.0 in the way it handles symlinks inside containers. An attacker who has compromised an existing container can cause arbitrary files on the host filesystem to be read/written when an administrator tries to copy a file from/to the container.</description>
+      <pubDate>Fri, 25 Aug 2023 21:29:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Podman has Files or Directories Accessible to External Parties</title>
+      <link>https://github.com/advisories/GHSA-vmhj-p9hw-vgrf</link>
+      <description>A flaw was discovered in Podman where it incorrectly allows containers when created to overwrite existing files in volumes, even if they are mounted as read-only. When a user runs a malicious container or a container based on a malicious image with an attached volume that is used for the first time, it is possible to trigger the flaw and overwrite files in the volume. This issue was introduced in version 1.6.0.</description>
+      <pubDate>Mon, 01 May 2023 22:27:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
