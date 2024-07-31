@@ -3,8 +3,8 @@
     <title>Container Software GHSA Feeds</title>
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
-    <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Tue, 30 Jul 2024 10:23:06 +0000</pubDate>
+    <managingEditor>ssst0n3@gmail.com (ssst0n3),github.com/cafan</managingEditor>
+    <pubDate>Tue, 30 Jul 2024 10:34:54 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
