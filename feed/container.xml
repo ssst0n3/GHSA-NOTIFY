@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 01 Aug 2024 17:15:27 +0000</pubDate>
+    <pubDate>Fri, 02 Aug 2024 15:41:31 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -651,7 +651,7 @@
       <title> CoreDNS may return invalid cache entries</title>
       <link>https://github.com/advisories/GHSA-m9w6-wp3h-vq8g</link>
       <description>A flaw was found in coredns. This issue could lead to invalid cache entries returning due to incorrectly implemented caching.</description>
-      <pubDate>Mon, 08 Jul 2024 14:24:39 +0000</pubDate>
+      <pubDate>Fri, 02 Aug 2024 15:31:16 +0000</pubDate>
     </item>
     <item>
       <title>coreDNS vulnerable to Improper Restriction of Communication Channel to Intended Endpoints</title>
