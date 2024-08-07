@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 02 Aug 2024 15:41:31 +0000</pubDate>
+    <pubDate>Wed, 07 Aug 2024 05:14:29 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -39,7 +39,7 @@
       <title>Moby Docker cp broken with debian containers</title>
       <link>https://github.com/advisories/GHSA-v2cv-wwxq-qq97</link>
       <description>In Docker 19.03.x before 19.03.1 linked against the GNU C Library (aka glibc), code injection can occur when the nsswitch facility dynamically loads a library inside a chroot that contains the contents of the container.</description>
-      <pubDate>Mon, 08 Jul 2024 15:55:05 +0000</pubDate>
+      <pubDate>Wed, 07 Aug 2024 05:01:20 +0000</pubDate>
     </item>
     <item>
       <title>Docker Authentication Bypass</title>
