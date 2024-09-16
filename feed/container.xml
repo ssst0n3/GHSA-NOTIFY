@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 12 Sep 2024 00:33:12 +0000</pubDate>
+    <pubDate>Mon, 16 Sep 2024 15:15:18 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -682,6 +682,12 @@
       <link>https://github.com/advisories/GHSA-gv9j-4w24-q7vx</link>
       <description>### Impact&#xA;&#xA;CoreDNS before 1.6.6 (using go DNS package &lt; 1.1.25) improperly generates random numbers because math/rand is used. The TXID becomes predictable, leading to response forgeries.&#xA;&#xA;### Patches&#xA;The problem has been fixed in 1.6.6+.&#xA;&#xA;### References&#xA;- [CVE-2019-19794](https://nvd.nist.gov/vuln/detail/CVE-2019-19794)&#xA;&#xA;### For more information&#xA;Please consult [our security guide](https://github.com/coredns/coredns/blob/master/.github/SECURITY.md) for more information regarding our security process.&#xA;</description>
       <pubDate>Wed, 11 Jan 2023 05:05:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Podman Elevated Container Privileges</title>
+      <link>https://github.com/advisories/GHSA-wp7w-vx86-vj9h</link>
+      <description>It has been discovered that podman before version 0.6.1 does not drop capabilities when executing a container as a non-root user. This results in unnecessary privileges being granted to the container.</description>
+      <pubDate>Mon, 16 Sep 2024 15:00:24 +0000</pubDate>
     </item>
     <item>
       <title>Podman vulnerable to memory-based denial of service</title>
