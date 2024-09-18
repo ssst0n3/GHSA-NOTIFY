@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 18 Sep 2024 17:46:44 +0000</pubDate>
+    <pubDate>Wed, 18 Sep 2024 22:57:01 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -658,6 +658,12 @@
       <link>https://github.com/advisories/GHSA-jqmc-79gx-7g8p</link>
       <description>An incorrect sysctls validation vulnerability was found in CRI-O 1.18 and earlier. The sysctls from the list of &#34;safe&#34; sysctls specified for the cluster will be applied to the host if an attacker is able to create a pod with a hostIPC and hostNetwork kernel namespace.</description>
       <pubDate>Fri, 03 Feb 2023 05:05:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>CoreDNS Cache Poisoning via a birthday attack</title>
+      <link>https://github.com/advisories/GHSA-h92q-fgpp-qhrq</link>
+      <description>CoreDNS through 1.10.1 enables attackers to achieve DNS cache poisoning and inject fake responses via a birthday attack.</description>
+      <pubDate>Wed, 18 Sep 2024 22:50:14 +0000</pubDate>
     </item>
     <item>
       <title>CoreDNS vulnerable to TuDoor Attacks</title>
