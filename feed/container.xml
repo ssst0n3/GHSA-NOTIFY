@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 18 Sep 2024 22:57:01 +0000</pubDate>
+    <pubDate>Thu, 19 Sep 2024 21:51:23 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -663,7 +663,7 @@
       <title>CoreDNS Cache Poisoning via a birthday attack</title>
       <link>https://github.com/advisories/GHSA-h92q-fgpp-qhrq</link>
       <description>CoreDNS through 1.10.1 enables attackers to achieve DNS cache poisoning and inject fake responses via a birthday attack.</description>
-      <pubDate>Wed, 18 Sep 2024 22:50:14 +0000</pubDate>
+      <pubDate>Thu, 19 Sep 2024 21:49:26 +0000</pubDate>
     </item>
     <item>
       <title>CoreDNS vulnerable to TuDoor Attacks</title>
