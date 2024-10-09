@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 25 Sep 2024 19:40:31 +0000</pubDate>
+    <pubDate>Wed, 09 Oct 2024 22:40:01 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -694,6 +694,12 @@
       <link>https://github.com/advisories/GHSA-gv9j-4w24-q7vx</link>
       <description>### Impact&#xA;&#xA;CoreDNS before 1.6.6 (using go DNS package &lt; 1.1.25) improperly generates random numbers because math/rand is used. The TXID becomes predictable, leading to response forgeries.&#xA;&#xA;### Patches&#xA;The problem has been fixed in 1.6.6+.&#xA;&#xA;### References&#xA;- [CVE-2019-19794](https://nvd.nist.gov/vuln/detail/CVE-2019-19794)&#xA;&#xA;### For more information&#xA;Please consult [our security guide](https://github.com/coredns/coredns/blob/master/.github/SECURITY.md) for more information regarding our security process.&#xA;</description>
       <pubDate>Wed, 11 Jan 2023 05:05:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Improper Input Validation in Buildah and Podman</title>
+      <link>https://github.com/advisories/GHSA-fhqq-8f65-5xfc</link>
+      <description>A vulnerability exists in the bind-propagation option of the Dockerfile RUN --mount instruction. The system does not properly validate the input passed to this option, allowing users to pass arbitrary parameters to the mount instruction. This issue can be exploited to mount sensitive directories from the host into a container during the build process and, in some cases, modify the contents of those mounted files. Even if SELinux is used, this vulnerability can bypass its protection by allowing the source directory to be relabeled to give the container access to host files.</description>
+      <pubDate>Wed, 09 Oct 2024 22:34:34 +0000</pubDate>
     </item>
     <item>
       <title>Podman Elevated Container Privileges</title>
