@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 21 Nov 2024 21:37:05 +0000</pubDate>
+    <pubDate>Fri, 22 Nov 2024 22:58:06 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -237,7 +237,7 @@
       <title>Man-in-the-Middle (MitM)</title>
       <link>https://github.com/advisories/GHSA-8w94-cf6g-c8mg</link>
       <description>Docker before 1.3.1 and docker-py before 0.5.3 fall back to HTTP when the HTTPS connection to the registry fails, which allows man-in-the-middle attackers to conduct downgrade attacks and obtain authentication and image data by leveraging a network position between the client and the registry to block HTTPS traffic.</description>
-      <pubDate>Mon, 09 Jan 2023 05:04:42 +0000</pubDate>
+      <pubDate>Fri, 22 Nov 2024 22:52:42 +0000</pubDate>
     </item>
     <item>
       <title>Arbitrary Code Execution</title>
