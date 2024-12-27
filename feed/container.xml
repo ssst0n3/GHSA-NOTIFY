@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 20 Dec 2024 15:38:06 +0000</pubDate>
+    <pubDate>Fri, 27 Dec 2024 18:31:39 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -729,7 +729,7 @@
       <title>Podman vulnerable to memory-based denial of service</title>
       <link>https://github.com/advisories/GHSA-rpcc-p8xm-rc6p</link>
       <description>A flaw was found in Podman. This issue may allow an attacker to create a specially crafted container that, when configured to share the same IPC with at least one other container, can create a large number of IPC resources in /dev/shm. The malicious container will continue to exhaust resources until it is out-of-memory (OOM) killed. While the malicious container&#39;s cgroup will be removed, the IPC resources it created are not. Those resources are tied to the IPC namespace that will not be removed until all containers using it are stopped, and one non-malicious container is holding the namespace open. The malicious container is restarted, either automatically or by attacker control, repeating the process and increasing the amount of memory consumed. With a container configured to restart always, such as `podman run --restart=always`, this can result in a memory-based denial of service of the system.</description>
-      <pubDate>Wed, 16 Oct 2024 17:05:04 +0000</pubDate>
+      <pubDate>Fri, 27 Dec 2024 18:30:26 +0000</pubDate>
     </item>
     <item>
       <title>Podman Path Traversal Vulnerability leads to arbitrary file read/write</title>
