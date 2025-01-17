@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 27 Dec 2024 18:31:39 +0000</pubDate>
+    <pubDate>Fri, 17 Jan 2025 13:10:00 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -69,7 +69,7 @@
       <title>Docker supplementary group permissions not set up properly, allowing attackers to bypass primary group restrictions</title>
       <link>https://github.com/advisories/GHSA-rc4r-wh2q-q6c4</link>
       <description>Moby is an open-source project created by Docker to enable software containerization. A bug was found in Moby (Docker Engine) where supplementary groups are not set up properly. If an attacker has direct access to a container and manipulates their supplementary group access, they may be able to use supplementary group access to bypass primary group restrictions in some cases, potentially gaining access to sensitive information or gaining the ability to execute code in that container.  This bug is fixed in Moby (Docker Engine) 20.10.18. Users should update to this version when it is available. Running containers should be stopped and restarted for the permissions to be fixed. For users unable to upgrade, this problem can be worked around by not using the `&#34;USER $USERNAME&#34;` Dockerfile instruction. Instead by calling `ENTRYPOINT [&#34;su&#34;, &#34;-&#34;, &#34;user&#34;]` the supplementary groups will be set up properly.&#xA;&#xA;Thanks to Steven Murdoch for reporting this issue.&#xA;&#xA;----&#xA;&#xA;### Impact&#xA;&#xA;If an attacker has direct access to a container and manipulates their supplementary group access, they may be able to use supplementary group access to bypass primary group restrictions in some cases, potentially gaining access to sensitive information or gaining the ability to execute code in that container. &#xA;&#xA;### Patches&#xA;&#xA; This bug is fixed in Moby (Docker Engine) 20.10.18. Users should update to this version when it is available.&#xA;&#xA;### Workarounds&#xA;&#xA;This problem can be worked around by not using the `&#34;USER $USERNAME&#34;` Dockerfile instruction. Instead by calling `ENTRYPOINT [&#34;su&#34;, &#34;-&#34;, &#34;user&#34;]` the supplementary groups will be set up properly.&#xA;&#xA;### References&#xA;&#xA;https://www.benthamsgaze.org/2022/08/22/vulnerability-in-linux-containers-investigation-and-mitigation/&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* [Open an issue](https://github.com/moby/moby/issues/new)&#xA;* Email us at [security@docker.com](mailto:security@docker.com)&#xA;</description>
-      <pubDate>Mon, 08 Jul 2024 15:52:14 +0000</pubDate>
+      <pubDate>Fri, 17 Jan 2025 13:07:20 +0000</pubDate>
     </item>
     <item>
       <title>Moby (Docker Engine) is vulnerable to Ambiguous OCI manifest parsing</title>
