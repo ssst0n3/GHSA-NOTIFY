@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Fri, 27 Jun 2025 22:09:07 +0000</pubDate>
+    <pubDate>Wed, 02 Jul 2025 14:29:34 +0000</pubDate>
     <item>
       <title>Authz zero length regression</title>
       <link>https://github.com/advisories/GHSA-v23v-6jw2-98fq</link>
@@ -525,19 +525,19 @@
       <title>CRI-O: Maliciously structured checkpoint file can gain arbitrary node access</title>
       <link>https://github.com/advisories/GHSA-7p9f-6x8j-gxxp</link>
       <description>### Impact&#xA;&#xA;### Patches&#xA;1.31.1, 1.30.6, 1.29.8&#xA;&#xA;### Workarounds&#xA;set `enable_criu_support = false` &#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_</description>
-      <pubDate>Thu, 01 May 2025 13:31:20 +0000</pubDate>
+      <pubDate>Wed, 02 Jul 2025 14:28:00 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O: Maliciously structured checkpoint file can gain arbitrary node access</title>
       <link>https://github.com/advisories/GHSA-7p9f-6x8j-gxxp</link>
       <description>### Impact&#xA;&#xA;### Patches&#xA;1.31.1, 1.30.6, 1.29.8&#xA;&#xA;### Workarounds&#xA;set `enable_criu_support = false` &#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_</description>
-      <pubDate>Thu, 01 May 2025 13:31:20 +0000</pubDate>
+      <pubDate>Wed, 02 Jul 2025 14:28:00 +0000</pubDate>
     </item>
     <item>
       <title>CRI-O: Maliciously structured checkpoint file can gain arbitrary node access</title>
       <link>https://github.com/advisories/GHSA-7p9f-6x8j-gxxp</link>
       <description>### Impact&#xA;&#xA;### Patches&#xA;1.31.1, 1.30.6, 1.29.8&#xA;&#xA;### Workarounds&#xA;set `enable_criu_support = false` &#xA;&#xA;### References&#xA;_Are there any links users can visit to find out more?_</description>
-      <pubDate>Thu, 01 May 2025 13:31:20 +0000</pubDate>
+      <pubDate>Wed, 02 Jul 2025 14:28:00 +0000</pubDate>
     </item>
     <item>
       <title>malicious container creates symlink &#34;mtab&#34; on the host External</title>
