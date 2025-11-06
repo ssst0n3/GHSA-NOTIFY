@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Wed, 05 Nov 2025 18:51:35 +0000</pubDate>
+    <pubDate>Thu, 06 Nov 2025 15:30:04 +0000</pubDate>
     <item>
       <title>Moby firewalld reload removes bridge network isolation</title>
       <link>https://github.com/advisories/GHSA-4vq8-7jfc-9cvp</link>
@@ -262,6 +262,12 @@
       <link>https://github.com/advisories/GHSA-997c-fj8j-rq5h</link>
       <description>Docker 1.3.2 allows remote attackers to execute arbitrary code with root privileges via a crafted (1) image or (2) build in a Dockerfile in an LZMA (.xz) archive, related to the chroot for archive extraction.</description>
       <pubDate>Mon, 09 Jan 2023 05:04:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>containerd affected by a local privilege escalation via wide permissions on CRI directory</title>
+      <link>https://github.com/advisories/GHSA-pwhc-rpq9-4c8w</link>
+      <description>### Impact&#xA;&#xA;An overly broad default permission vulnerability was found in containerd.&#xA;&#xA;- `/var/lib/containerd` was created with the permission bits 0o711, while it should be created with 0o700&#xA;  - Allowed local users on the host to potentially access the metadata store and the content store&#xA;- `/run/containerd/io.containerd.grpc.v1.cri` was created with 0o755, while it should be created with 0o700&#xA;  - Allowed local users on the host to potentially access the contents of Kubernetes local volumes. The contents of volumes might include setuid binaries, which could allow a local user on the host to elevate privileges on the host.&#xA;- `/run/containerd/io.containerd.sandbox.controller.v1.shim` was created with 0o711, while it should be created with 0o700&#xA;&#xA;The directory paths may differ depending on the daemon configuration.&#xA;When the `temp` directory path is specified in the daemon configuration, that directory was also created with 0o711, while it should be created with 0o700.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in the following containerd versions:&#xA;&#xA;* 2.2.0&#xA;* 2.1.5&#xA;* 2.0.7&#xA;* 1.7.29&#xA;&#xA;Users should update to these versions to resolve the issue.&#xA;These updates automatically change the permissions of the existing directories.&#xA;&#xA;&gt; [!NOTE]&#xA;&gt;&#xA;&gt; `/run/containerd` and `/run/containerd/io.containerd.runtime.v2.task` are still created with 0o711.&#xA;&gt; This is an expected behavior for supporting userns-remapped containers.&#xA;&#xA;### Workarounds&#xA;&#xA;The system administrator on the host can manually chmod the directories to not &#xA;have group or world accessible permisisons:&#xA;&#xA;```&#xA;chmod 700 /var/lib/containerd&#xA;chmod 700 /run/containerd/io.containerd.grpc.v1.cri&#xA;chmod 700 /run/containerd/io.containerd.sandbox.controller.v1.shim&#xA;```&#xA;&#xA;An alternative mitigation would be to run containerd in [rootless mode](https://github.com/containerd/containerd/blob/main/docs/rootless.md).&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank David Leadbeater for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md).&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)&#xA;&#xA;To report a security issue in containerd:&#xA;&#xA;* [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)</description>
+      <pubDate>Thu, 06 Nov 2025 15:12:09 +0000</pubDate>
     </item>
     <item>
       <title>containerd has an integer overflow in User ID handling</title>
