@@ -4,7 +4,7 @@
     <link>https://raw.githubusercontent.com/ssst0n3/GHSA-NOTIFY/main/output/feed.xml</link>
     <description></description>
     <managingEditor>ssst0n3@gmail.com (ssst0n3)</managingEditor>
-    <pubDate>Thu, 06 Nov 2025 23:29:37 +0000</pubDate>
+    <pubDate>Thu, 06 Nov 2025 23:42:35 +0000</pubDate>
     <item>
       <title>Moby firewalld reload removes bridge network isolation</title>
       <link>https://github.com/advisories/GHSA-4vq8-7jfc-9cvp</link>
@@ -262,6 +262,12 @@
       <link>https://github.com/advisories/GHSA-997c-fj8j-rq5h</link>
       <description>Docker 1.3.2 allows remote attackers to execute arbitrary code with root privileges via a crafted (1) image or (2) build in a Dockerfile in an LZMA (.xz) archive, related to the chroot for archive extraction.</description>
       <pubDate>Mon, 09 Jan 2023 05:04:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>containerd CRI server: Host memory exhaustion through Attach goroutine leak</title>
+      <link>https://github.com/advisories/GHSA-m6hq-p25p-ffr2</link>
+      <description>### Impact&#xA;&#xA;A bug was found in containerd&#39;s CRI Attach implementation where a user can exhaust memory on the host due to goroutine leaks. &#xA;&#xA;Repetitive calls of CRI Attach (e.g., [`kubectl attach`](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_attach/)) could increase the memory usage of containerd.&#xA;&#xA;### Patches&#xA;&#xA;This bug has been fixed in the following containerd versions:&#xA;&#xA;* 2.2.0&#xA;* 2.1.5&#xA;* 2.0.7&#xA;* 1.7.29&#xA;&#xA;Users should update to these versions to resolve the issue.&#xA;&#xA;### Workarounds&#xA;&#xA;Set up an admission controller to control accesses to `pods/attach` resources.&#xA;e.g., [Validating Admission Policy](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/).&#xA;&#xA;### Credits&#xA;&#xA;The containerd project would like to thank @Wheat2018 for responsibly disclosing this issue in accordance with the [containerd security policy](https://github.com/containerd/project/blob/main/SECURITY.md).&#xA;&#xA;### References&#xA;&#xA;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-64329&#xA;&#xA;### For more information&#xA;&#xA;If you have any questions or comments about this advisory:&#xA;&#xA;* Open an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)&#xA;* Email us at [security@containerd.io](mailto:security@containerd.io)&#xA;&#xA;To report a security issue in containerd:&#xA;&#xA;* [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)</description>
+      <pubDate>Thu, 06 Nov 2025 23:32:24 +0000</pubDate>
     </item>
     <item>
       <title>containerd affected by a local privilege escalation via wide permissions on CRI directory</title>
